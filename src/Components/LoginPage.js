@@ -27,7 +27,7 @@ function LoginPage(props) {
 
         var { email, password } = document.forms[0];
 
-        const userInfo = users.find((user) => user.email === email.value)
+        const userInfo = account.find((user) => user.email === email.value)
 
         if (userInfo) {
             if (userInfo.password !== password.value) {
