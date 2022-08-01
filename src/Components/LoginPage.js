@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 
 function LoginPage(props) {
     const [isSubmit, setSubmit] = useState(false);
-    
-    const account = [
+
+    const users = [
         {
             email: 'cprg352+admin@gmail.com',
             password: 'password'
@@ -22,32 +22,34 @@ function LoginPage(props) {
         }
     ];
 
+
     const submitHandle = (event) => {
         event.preventDefault();
 
         var { email, password } = document.forms[0];
 
-        const userInfo = account.find((user) => user.email === email.value)
+        const userInfo = users.find((user) => user.email === email.value)
 
         if (userInfo) {
             if (userInfo.password !== password.value) {
                 alert("Invalid password")
             } else {
                 setSubmit(true);
-                alert(`Email: ${userInfo.email} \nPassword: ${userInfo.password}`)
+                // alert(`Email: ${userInfo.email} \nPassword: ${userInfo.password}`)
+                alert('Log in successful')
             }
         } else {
-            alert("Invalid username")
+            alert("Invalid email")
         }
     }
 
     const SignInForm = (
-        <div className="loginForm">
+        <div className="signInForm">
             <form onSubmit={submitHandle}>
                 <div>
                     <h2>Sign In</h2>
                     <label>Email: </label><br/>
-                    <input type='text' name="username" required />
+                    <input type='text' name="email" required />
                 </div>
                 <div>
                     <label>Password: </label><br/>
@@ -60,11 +62,11 @@ function LoginPage(props) {
         </div>
     );
 
-  return (
-    <div className='loginPage'>
-        {isSubmit ? SignInForm : SignInForm}
-    </div>
-  );
+    return (
+        <div className='loginForm'>
+            {isSubmit ? SignInForm : SignInForm}
+        </div>
+    );
 }
 
 export default LoginPage
