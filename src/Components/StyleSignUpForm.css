@@ -1,0 +1,28 @@
+form {
+  display: table;
+  box-sizing: border-box;
+  font-family: "Times New Roman";
+  border: 4px solid;
+  text-align: center;
+  background-color: #f1f1f1;
+  /* margin: right; */
+  width: 40%;
+}
+
+label {
+  display: table;
+}
+
+input {
+  display: table;
+}
+
+.signUp {
+  text-align: center;
+  font-family: "Times New Roman";
+  text-decoration: none;
+}
+
+.buttons {
+  text-align: center;
+}
