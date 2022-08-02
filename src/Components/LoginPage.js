@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Navibar from './Navbar';
 
 function LoginPage(props) {
     const [isSubmit, setSubmit] = useState(false);
@@ -63,8 +64,11 @@ function LoginPage(props) {
     );
 
     return (
+        <div>
+        
         <div className='loginForm'>
             {isSubmit ? SignInForm : SignInForm}
+        </div>
         </div>
     );
 }

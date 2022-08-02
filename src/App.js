@@ -2,7 +2,7 @@ import "./App.css";
 
 import Navibar from "./Components/Navbar";
 
-// import "/Components/SignUpForm.js";
+
 function App() {
   return (
     <div className="App">
