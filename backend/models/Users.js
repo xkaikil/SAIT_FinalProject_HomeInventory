@@ -7,9 +7,9 @@ let userSchema = new Schema({
     email: "",
     password: "",
     role: "",
-    status: '',
+    status: "",
 }, {
-    collecntion: 'users'
+    collection: 'users'
 })
 
 module.exports = mongoose.model('User', userSchema);

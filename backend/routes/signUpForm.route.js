@@ -3,11 +3,15 @@ let mongoose = require("mongoose"),
   router = express.Router();
 
 // Users Model
-let studentSchema = require("../models/form");
+<<<<<<< HEAD
+let studentSchema = require("../models/Users");
+=======
+let userSchema = require("../models/form");
+>>>>>>> cc70ac141b34473806b713f861daea3554e5ae08
 
 // Create Users
 router.post("/create-user", (req, res, next) => {
-  studentSchema.create(req.body, (error, data) => {
+  userSchema.create(req.body, (error, data) => {
     if (error) {
       return next(error);
     } else {
@@ -19,7 +23,7 @@ router.post("/create-user", (req, res, next) => {
 
 // Read Users
 router.get("/", (req, res) => {
-  studentSchema.find((error, data) => {
+  userSchema.find((error, data) => {
     if (error) {
       return next(error);
     } else {
@@ -33,7 +37,7 @@ router
   .route("/update-user/:id")
   // Get Single Student
   .get((req, res) => {
-    studentSchema.findById(req.params.id, (error, data) => {
+    userSchema.findById(req.params.id, (error, data) => {
       if (error) {
         return next(error);
       } else {
@@ -44,7 +48,7 @@ router
 
   // Update Users Data
   .put((req, res, next) => {
-    studentSchema.findByIdAndUpdate(
+    userSchema.findByIdAndUpdate(
       req.params.id,
       {
         $set: req.body,
@@ -63,7 +67,7 @@ router
 
 // Delete Users
 router.delete("/delete-user/:id", (req, res, next) => {
-  studentSchema.findByIdAndRemove(req.params.id, (error, data) => {
+  userSchema.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {

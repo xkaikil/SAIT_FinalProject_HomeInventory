@@ -18,7 +18,11 @@ const EditProfile = (prop) => {
         axios
         .put(
             //Add in user profile db location at the end of the url
-            "http://localhost:27017/homeNventory/users" + id, accoutnObject
+<<<<<<< HEAD
+            "http://localhost:4000/users/update-user" + id, accoutnObject
+=======
+            "http://localhost:4000/users/update-users/" + id, accoutnObject
+>>>>>>> cc70ac141b34473806b713f861daea3554e5ae08
         )
         .then((res) => {
             if (res.status == 200) {
@@ -32,7 +36,7 @@ const EditProfile = (prop) => {
     useEffect(() => {
         axios
         .get(
-            "http://localhost:27017/homeNventory/users" + id
+            "http://localhost:4000/users/update-user" + id
         )
         .then ((res) => {
             const { firstName, lastName, email, password, admin } = res.data;
