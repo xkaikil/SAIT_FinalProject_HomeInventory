@@ -14,15 +14,10 @@ const EditProfile = (prop) => {
         role: ""
     });
 
-    const onSubmit = (accoutnObject) => {
+    const onSubmit = (accountObject) => {
         axios
         .put(
-            //Add in user profile db location at the end of the url
-<<<<<<< HEAD
-            "http://localhost:4000/users/update-user" + id, accoutnObject
-=======
-            "http://localhost:4000/users/update-users/" + id, accoutnObject
->>>>>>> cc70ac141b34473806b713f861daea3554e5ae08
+            "http://localhost:4000/users/update-user" + id, accountObject
         )
         .then((res) => {
             if (res.status == 200) {
