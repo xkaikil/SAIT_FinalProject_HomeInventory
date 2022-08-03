@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./StyleSignUpForm.css";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -38,9 +38,9 @@ const SignUpForm = (props) => {
             <ErrorMessage name="password" className="d-block invalid-feedback" component="span" />
           </FormGroup>
           <div className="regisButton">
-            <button variant="danger" size="lg" block="block" type="submit">
+            <Button variant="danger" size="lg" block="block" type="submit">
               {props.children}
-            </button>
+            </Button>
           </div>
         </Form>
       </Formik>
