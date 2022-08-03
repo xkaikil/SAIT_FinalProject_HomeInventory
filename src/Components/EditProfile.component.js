@@ -18,7 +18,7 @@ const EditProfile = (prop) => {
         axios
         .put(
             //Add in user profile db location at the end of the url
-            "http://localhost:27017/homeNventory/users" + id, accoutnObject
+            "http://localhost:4000/users/update-users/" + id, accoutnObject
         )
         .then((res) => {
             if (res.status == 200) {
