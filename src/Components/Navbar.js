@@ -16,7 +16,7 @@ import './navbar.css';
 //other componentes
 import Inventory from './Inventory-View';
 import Account from './Account-View';
-import headerImg from '../assets/header.png';
+import headerImg from '../assets/header_dark.png';
 import Logout from "./Logout";
 import HomePage from "./HomePage";
 import LoginPage from './LoginPage';
@@ -51,7 +51,7 @@ class Navibar extends React.Component {
       <Router>
         <div className="nav-wrapper">
           <header className="header">
-            <Navbar className="navbar">
+            <Navbar className="navbar" bg='dark' variant='dark'>
               <Container>
                 <Navbar.Brand>
                   <Link to={"/"}>
