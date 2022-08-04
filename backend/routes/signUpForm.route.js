@@ -74,4 +74,31 @@ router.delete("/delete-user/:id", (req, res, next) => {
   });
 });
 
+//Validate Login
+router.get("/login", (req, res, next) => {
+  userSchema
+    .findOne({
+      email: req.body.email,
+      password: req.body.password,
+    })
+    .then((data) => {
+      if (data.password === req.body.password) {
+        res.json(data);
+        console.log("User logged in successfully !");
+      } else {
+        res.json({
+          message: "wrong credentials",
+        });
+      }
+      // },
+      // (error, data) => {
+      // if (error) {
+      //     return next(error);
+      // } else {
+      //     res.json(data);
+      //     console.log("User logged in successfully !");
+      // }
+    });
+});
+
 module.exports = router;
