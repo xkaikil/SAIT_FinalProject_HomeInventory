@@ -1,76 +1,53 @@
-import React, {useState} from 'react'
-import Navibar from './Navbar';
+// import React from "react";
+// import "./StyleSignUpForm.css";
+// import * as Yup from "yup";
+// import { Formik, Form, Field, ErrorMessage } from "formik";
+// import { FormGroup, Button } from "react-bootstrap";
 
-function LoginPage(props) {
-    const [isSubmit, setSubmit] = useState(false);
+// const LoginPage = (props) => {
+//   const validationSchema = Yup.object().shape({
+//     email: Yup.string()
+//       .email("You have to enter an invalid email address")
+//       .required("Required"),
+//     password: Yup.string().required("Required"),
+//   });
 
-    const users = [
-        {
-            email: 'cprg352+admin@gmail.com',
-            password: 'password'
-        },
-        {
-            email: 'cprg352+admin2@gmail.com',
-            password: 'password'
-        },
-        {
-            email: 'cprg352+anne@gmail.com',
-            password: 'password'
-        },
-        {
-            email: 'cprg352+barb@gmail.com',
-            password: 'password'
-        }
-    ];
+//   console.log(props);
+//   return (
+//     <div className="regisForm">
+//       <Formik
+//         {...props}
+//         validationSchema={validationSchema}
+//         initialValues={{ email: "", password: "" }}
+//       >
+//         <Form>
+//           <FormGroup className="email">
+//             Email:
+//             <Field name="email" type="email" className="field-control" />
+//             <ErrorMessage
+//               name="first"
+//               className="d-block invalid-feedback"
+//               component="span"
+//             />
+//           </FormGroup>
+//           <FormGroup className="password">
+//             password:
+//             <Field name="password" type="password" className="field-control" />
+//             <ErrorMessage
+//               name="password"
+//               className="d-block invalid-feedback"
+//               component="span"
+//             />
+//           </FormGroup>
+//           <div className="login-button">
+//             <Button variant="danger" size="lg" block="block" type="submit">
+//               {props.children}
+//             </Button>
+//           </div>
+//         </Form>
+//       </Formik>
+//     </div>
+//   );
+// };
 
-
-    const submitHandle = (event) => {
-        event.preventDefault();
-
-        var { email, password } = document.forms[0];
-
-        const userInfo = users.find((user) => user.email === email.value)
-
-        if (userInfo) {
-            if (userInfo.password !== password.value) {
-                alert("Invalid password")
-            } else {
-                setSubmit(true);
-                // alert(`Email: ${userInfo.email} \nPassword: ${userInfo.password}`)
-                alert('Log in successful')
-            }
-        } else {
-            alert("Invalid email")
-        }
-    }
-
-    const SignInForm = (
-        <div className="signInForm">
-            <form onSubmit={submitHandle}>
-                <div>
-                    <h2>Sign In</h2>
-                    <label>Email: </label><br/>
-                    <input type='text' name="email" required />
-                </div>
-                <div>
-                    <label>Password: </label><br/>
-                    <input type='password' name="password" required />
-                </div>
-                <div className="button">
-                    <button type='submit'>Submit</button>
-                </div>
-            </form>
-        </div>
-    );
-
-    return (
-        <div>
-        
-        <div className='loginForm'>
-            {isSubmit ? SignInForm : SignInForm}
-        </div>
-        </div>
-    );
-}
-
-export default LoginPage
+// export default LoginPage;
