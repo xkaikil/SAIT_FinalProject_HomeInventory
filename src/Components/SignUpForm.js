@@ -15,24 +15,24 @@ const SignUpForm = (props) => {
   console.log(props);
   return (
     <div className="regisForm">
-      <Formik {...props} validationSchema={validationSchema}>
+      <Formik {...props} validationSchema={validationSchema} initialValues={ {first: '', last: '', email: '', password: ''} }>
         <Form>
           <FormGroup className="firstName">
             First Name:
-            <Field name="first" type="text" className="field-control" />
+            <Field name="firstName" type="text" className="field-control" />
             <ErrorMessage name="first" className="d-block invalid-feedback" component="span" />
           </FormGroup>
           <FormGroup className="lastName">
             Last Name:
-            <Field name="last" type="text" className="field-control" />
+            <Field name="lastName" type="text" className="field-control" />
             <ErrorMessage name="last" className="d-block invalid-feedback" component="span" />
           </FormGroup>
-          <FormGroup className="firstName">
+          <FormGroup className="email">
             Email:
-            <Field name="email" type="email" className="field-control" />
+            <Field name="email" type="text" className="field-control" />
             <ErrorMessage name="first" className="d-block invalid-feedback" component="span" />
           </FormGroup>
-          <FormGroup className="firstName">
+          <FormGroup className="password">
             password:
             <Field name="password" type="password" className="field-control" />
             <ErrorMessage name="password" className="d-block invalid-feedback" component="span" />
