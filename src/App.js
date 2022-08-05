@@ -30,6 +30,8 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 const App = () => {
   return (
+    <div>
+    <Navibar/>
     <Router>
       <div className="App">
         <div className="body">
@@ -41,6 +43,7 @@ const App = () => {
         </div>
       </div>
     </Router>
+    </div>
   );
 };
 
