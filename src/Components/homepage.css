@@ -32,3 +32,6 @@ h1{
     font-size: 2em;
 
 }
+.animated{
+    animation-delay: 1s;
+}
