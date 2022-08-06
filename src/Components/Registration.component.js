@@ -7,7 +7,7 @@ const RegisUser = () => {
         useState ({firstName: '', lastName:'', email: '', password:''})
     const onSubmit = accountObject => {
         axios
-        .post('http://localhost:4000/signup/users/create-user', accountObject)
+        .post('/users/signup', accountObject)
         .then(res => {
             if (res.status === 200)
             alert('Registration successful')

@@ -15,7 +15,7 @@ const SignUpForm = (props) => {
   console.log(props);
   return (
     <div className="regisForm">
-      <Formik {...props} validationSchema={validationSchema} initialValues={ {first: '', last: '', email: '', password: ''} }>
+      <Formik {...props} validationSchema={validationSchema} initialValues={ {firstName: '', lastName: '', email: '', password: ''} }>
         <Form>
           <FormGroup className="firstName">
             First Name:
