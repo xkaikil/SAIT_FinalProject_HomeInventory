@@ -5,8 +5,11 @@ let mongoose = require("mongoose"),
 // Users Model
 let userSchema = require("../models/Users");
 
+
 // Create Users
 router.post("/create-user", (req, res, next) => {
+  res.set('Content-Type','application/json');
+  res.set('x-access-token', '*');
   userSchema.create(req.body, (error, data) => {
     if (error) {
       return next(error);
