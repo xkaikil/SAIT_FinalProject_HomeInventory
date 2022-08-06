@@ -6,7 +6,7 @@ let mongoose = require("mongoose"),
 let userSchema = require("../models/Users");
 
 // Create Users
-router.post("/signup", (req, res, next) => {
+router.post("/create-user", (req, res, next) => {
   userSchema.create(req.body, (error, data) => {
     if (error) {
       return next(error);
