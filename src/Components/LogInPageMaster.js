@@ -3,7 +3,7 @@ import "./StyleSignUpForm.css";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
-
+import {Link} from "react-router-dom";
 const LogInPageMaster = (props) => {
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -44,6 +44,7 @@ const LogInPageMaster = (props) => {
               {props.children}
             </Button>
           </div>
+          <Link to="/signup">New User?</Link>
         </Form>
       </Formik>
     </div>

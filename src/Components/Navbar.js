@@ -19,15 +19,15 @@ import Account from './Account-View';
 import headerImg from '../assets/header_dark.png';
 import Logout from "./Logout";
 import HomePage from "./HomePage";
-import LoginPage from './LoginPage';
-
+import SignUp from "./Registration.component";
+import LogIn from "./LogIn.component";
 
 class Navibar extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      loggedIn : false,
-      user : 'Guest'
+      loggedIn: false,
+      user: 'Guest'
     };
   }
   render() {
@@ -101,8 +101,10 @@ class Navibar extends React.Component {
                       element={<HomePage />} />
 
                     <Route path="/login"
-                      element={<LoginPage />} />
+                      element={<LogIn />} />
 
+                    <Route path="/signup"
+                      element={<SignUp />} />
                   </Routes>
 
                 </div>

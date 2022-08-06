@@ -2,8 +2,7 @@
 import "./App.css";
 
 import Navibar from "./Components/Navbar";
-import RegisUser from "./Components/Registration.component";
-import LogIn from "./Components/LogIn.component";
+
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 // function App() {
@@ -30,20 +29,16 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-    <Navibar/>
-    <Router>
+    
+    
+    
       <div className="App">
         <div className="body">
-          <LogIn />
-          {/* <Routes>
-            <Route exact path="/" element={<RegisUser />} />
-            <Route path="/create-user" element={<RegisUser />} />
-          </Routes> */}
+        <Navibar/>
         </div>
       </div>
-    </Router>
-    </div>
+    
+    
   );
 };
 
