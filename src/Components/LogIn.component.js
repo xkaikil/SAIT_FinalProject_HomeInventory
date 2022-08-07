@@ -10,10 +10,14 @@ const LogIn = () => {
 
     const onSubmit = (accountObject) => {
         axios
-            .get("http://localhost:4000/users/login", accountObject)
+            .get("http://localhost:4000/users/login", {params: {
+                email: accountObject.email,
+                password: accountObject.password,
+            }})
             .then((res) => {
+
                 if (res.status === 200) {
-                    alert("Login successful!!");
+                    alert(JSON.stringify(res));
                 } else Promise.reject();
             })
             .catch((err) => alert("Something went wrong"));

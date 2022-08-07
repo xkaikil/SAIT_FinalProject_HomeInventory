@@ -78,16 +78,21 @@ router.delete("/delete-user/:id", (req, res, next) => {
 
 //Validate Login
 router.get("/login", (req, res, next) => {
+  
+  
+  
+
   userSchema
     .findOne({
-      email: req.body.email,
-      password: req.body.password,
+      email : req.query.email
     })
     .then((data) => {
-      if (data.password === req.body.password) {
-        res.json(data);
-        console.log("User logged in successfully !");
+ 
+      if (data.password === req.query.password) {
+        res.json({message: "right credentials",});
+        console.log("User logged in successfully!");
       } else {
+        console.log("Password or email is not correct!");
         res.json({
           message: "wrong credentials",
         });
