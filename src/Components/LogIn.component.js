@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import LogInPageMaster from "./LogInPageMaster";
 
@@ -10,13 +10,17 @@ const LogIn = () => {
 
     const onSubmit = (accountObject) => {
         axios
-            .get("http://localhost:4000/users/login", accountObject)
+            .post("http://localhost:4000/users/login", accountObject)
             .then((res) => {
                 if (res.status === 200) {
                     alert("Login successful!!");
-                } else Promise.reject();
+                }  else Promise.reject();
             })
-            .catch((err) => alert("Something went wrong"));
+            .catch((err) => {
+                if (err.response) {
+                    alert("Invalid Credentials");
+                } else
+                alert("Something went wrong")});
     };
 
     return (

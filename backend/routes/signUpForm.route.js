@@ -77,13 +77,24 @@ router.delete("/delete-user/:id", (req, res, next) => {
 });
 
 //Validate Login
-router.get("/login", (req, res, next) => {
+router.post("/login", (req, res, next) => {
   userSchema
     .findOne({
       email: req.body.email,
       password: req.body.password,
+    }, (error,data) => {
+      if (error) {
+        return next(error);
+      }if (!data) {
+        return res.status(401).end('Invalid Credentials');
+      } else {
+        res.status(200).json({
+          msg: data,
+        });
+      }
     })
-    .then((data) => {
+    
+      /** 
       if (data.password === req.body.password) {
         res.json(data);
         console.log("User logged in successfully !");
@@ -92,15 +103,8 @@ router.get("/login", (req, res, next) => {
           message: "wrong credentials",
         });
       }
-      // },
-      // (error, data) => {
-      // if (error) {
-      //     return next(error);
-      // } else {
-      //     res.json(data);
-      //     console.log("User logged in successfully !");
-      // }
-    });
+      */
+    
 });
 
 module.exports = router;
