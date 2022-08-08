@@ -99,6 +99,7 @@ router.post("/login", (req, res, next) => {
         res.json(data);
         console.log("User logged in successfully !");
       } else {
+        console.log("Password or email is not correct!");
         res.json({
           message: "wrong credentials",
         });
