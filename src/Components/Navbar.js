@@ -36,7 +36,10 @@ const Navibar = () => {
   let logInOut;
   console.log(user.id + user.name);
 
-  
+  const clear = () => {
+    localStorage.setItem('user', []);
+    
+  }
   if (user.id === null) {
     logInOut =
 
@@ -112,7 +115,10 @@ const Navibar = () => {
                     element={<Account />} />
 
                   <Route path="/inventory"
-                    element={<Inventory />} />
+                    element={<CreateItem />} />
+
+                  <Route path="/inventory/create-item"
+                    element={<CreateItem />} />
 
 
                   <Route path="/logout"

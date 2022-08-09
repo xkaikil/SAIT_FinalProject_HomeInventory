@@ -7,7 +7,7 @@ const CreateItem = () => {
         useState({ category: '', name: '', price: ''})
         const onSubmit = itemObject => {
             axios
-                .post('http://localhost:4000/inventory/create-item', studentObject)
+                .post('http://localhost:4000/inventory/create-item', itemObject)
                 .then(res => {
                     if (res.status === 200)
                         alert('Item successfully created')
@@ -23,3 +23,5 @@ const CreateItem = () => {
             </InventoryForm>
         )
 }
+
+export default CreateItem;
