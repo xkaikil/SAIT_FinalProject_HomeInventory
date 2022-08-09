@@ -31,6 +31,10 @@ i18n
             description2: 'Make filing claims hassle free',
             description3: 'it\'s free and easy to use!',
             button: 'Start inventorying now!'
+          },
+          login: {
+            newUser: "New User",
+            password: "Password"
           }
         }
       },
@@ -48,6 +52,10 @@ i18n
               description2: 'Simplifiez le dépôt des réclamations',
               description3: 'C\'est gratuit et facile à utiliser!',
               button: 'Commencez à faire l\'inventaire maintenant!'
+            },
+            login: {
+                newUser: "Nouvel utilisateur",
+                password: "Le mot de passe"
             }
         }
       }
