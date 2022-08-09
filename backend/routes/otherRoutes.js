@@ -4,8 +4,11 @@ let mongoose = require("mongoose"),
 
 
 //reloads to homepage
+router.get("/",(req,res,next) => {
+    res.render("../../public/index.html");
+  })
 router.get("/login",(req,res,next) => {
-    res.render(__dirname + "../../public/");
+    res.render("../../public/index.html");
   })
 
 

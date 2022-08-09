@@ -3,6 +3,7 @@ let mongoose = require("mongoose");
 let cors = require("cors");
 let bodyParser = require("body-parser");
 let dbConfig = require("./database/db");
+const path = require('path');
 
 //Express Route
 const userRoute = require("../backend/routes/signUpForm.route");
@@ -13,6 +14,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db).then(
   () => {
     console.log("Database successfully connected!");
+    console.log(__dirname);
   },
   (error) => {
     console.log("Could not connect to database : " + error);
@@ -28,8 +30,8 @@ app.use(
 );
 app.use(cors());
 app.use("/users", userRoute);
-
-app.use('/*',otherRoutes);
+app.use(express.static(path.join(__dirname,'../public/')));
+app.use('/',otherRoutes);
 //PORT
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {

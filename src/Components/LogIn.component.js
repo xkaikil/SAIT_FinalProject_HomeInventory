@@ -13,15 +13,20 @@ const LogIn = () => {
       .post("http://localhost:4000/users/login", accountObject)
       .then((res) => {
         if (res.status === 200) {
-          alert("Login successful, Welcome!");
-        } else Promise.reject();
-      })
-      .catch((err) => {
+            alert("Login successful!!");
+
+            localStorage.setItem('user',JSON.stringify(res.data));
+
+            console.log(res.data);
+            window.location.reload(false);
+        }  else Promise.reject();
+    })
+    .catch((err) => {
         if (err.response) {
-          alert("Invalid Credentials");
-        } else alert("Something went wrong");
-      });
-  };
+            alert("Invalid Credentials");
+        } else
+        alert("Something went wrong")});
+};
 
     return (
         <LogInPageMaster initialValue={formValues} onSubmit={onSubmit} enableReinitialize>

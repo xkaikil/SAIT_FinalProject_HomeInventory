@@ -36,10 +36,7 @@ const Navibar = () => {
   let logInOut;
   console.log(user.id + user.name);
 
-  const clear = () => {
-    localStorage.setItem('user', []);
-    
-  }
+  
   if (user.id === null) {
     logInOut =
 
@@ -51,7 +48,7 @@ const Navibar = () => {
   } else {
     logInOut =
       <Link to={"/logout"}
-        className="nav-link" onClick={clear}>
+        className="nav-link">
         Logout
       </Link>
   }
