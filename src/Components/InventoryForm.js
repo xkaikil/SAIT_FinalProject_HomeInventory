@@ -21,7 +21,7 @@ const InventoryForm = (props) => {
         validationSchema={validationSchema}
         initialValues={{ category: "", name: "", price: "" }}
       >
-        <form>
+        <Form>
           <FormGroup className="categoryBlock">
             Category:
             <Field name="category" type="text" className="form-control" />
@@ -54,7 +54,7 @@ const InventoryForm = (props) => {
               {props.children}
             </Button>
           </div>
-        </form>
+        </Form>
       </Formik>
     </div>
   );
