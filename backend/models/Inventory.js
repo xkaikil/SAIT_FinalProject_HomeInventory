@@ -12,7 +12,7 @@ let invSchema = new Schema(
             required: true
         },
         price: {
-            type: Number, min: [0.0, 'Cannot be a negative number'],
+            type: String,
             required: true
         }
     },
