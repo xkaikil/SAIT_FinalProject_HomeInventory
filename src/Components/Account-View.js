@@ -7,8 +7,12 @@ export class Account extends Component {
         window.location.reload();
     }
   render() {
+    let user = JSON.parse(localStorage.getItem('user'));
     return (
-      <div>Account-View</div>
+      <div>Account-View:
+        <h1>User: {user.name}</h1>
+        <h1>IS: {user.id}</h1>
+      </div>
     )
   }
 }
