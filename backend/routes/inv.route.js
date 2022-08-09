@@ -3,11 +3,11 @@ let mongoose = require("mongoose"),
 	router = express.Router();
 
 // Inventory Model
-let studentSchema = require("../models/Inventory");
+let invSchema = require("../models/Inventory");
 
 // CREATE inventory item
 router.post("/create-item", (req, res, next) => {
-	studentSchema.create(req.body, (error, data) => {
+	invSchema.create(req.body, (error, data) => {
 		if (error) {
 			return next(error);
 		} else {
@@ -19,7 +19,7 @@ router.post("/create-item", (req, res, next) => {
 
 // READ inventory
 router.get("/", (req, res) => {
-	studentSchema.find((error, data) => {
+	invSchema.find((error, data) => {
 		if (error) {
 			return next(error);
 		} else {
@@ -33,7 +33,7 @@ router
 	.route("/update-item/:id")
 	// Get Single item
 	.get((req, res) => {
-		studentSchema.findById(
+		invSchema.findById(
 			req.params.id, (error, data) => {
 				if (error) {
 					return next(error);
@@ -45,7 +45,7 @@ router
 
 	// Update inventory Data
 	.put((req, res, next) => {
-		studentSchema.findByIdAndUpdate(
+		invSchema.findByIdAndUpdate(
 			req.params.id,
 			{
 				$set: req.body,
@@ -65,7 +65,7 @@ router
 // Delete inventory item
 router.delete("/delete-item/:id",
 	(req, res, next) => {
-		studentSchema.findByIdAndRemove(
+		invSchema.findByIdAndRemove(
 			req.params.id, (error, data) => {
 				if (error) {
 					return next(error);

@@ -8,6 +8,7 @@ const path = require('path');
 //Express Route
 const userRoute = require("../backend/routes/signUpForm.route");
 const otherRoutes = require("../backend/routes/otherRoutes");
+const invRoute = require("../backend/routes/inv.route")
 
 //Connecting MongoDb Database
 mongoose.Promise = global.Promise;
@@ -30,6 +31,7 @@ app.use(
 );
 app.use(cors());
 app.use("/users", userRoute);
+app.use("/inventory", invRoute);
 app.use(express.static(path.join(__dirname,'../public/')));
 app.use('/',otherRoutes);
 //PORT
