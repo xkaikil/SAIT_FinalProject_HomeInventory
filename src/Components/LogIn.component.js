@@ -3,15 +3,25 @@ import axios from "axios";
 import LogInPageMaster from "./LogInPageMaster";
 
 const LogIn = () => {
-    const [formValues, setFormValues] = useState({
-        email: "",
-        password: "",
-    });
+  const [formValues, setFormValues] = useState({
+    email: "",
+    password: "",
+  });
 
-    const onSubmit = (accountObject) => {
-        axios
-            .post("http://localhost:4000/users/login", accountObject)
-            .then((res) => {
+  const onSubmit = (accountObject) => {
+    axios
+      .post("http://localhost:4000/users/login", accountObject)
+      .then((res) => {
+        if (res.status === 200) {
+          alert("Login successful, Welcome!");
+        } else Promise.reject();
+      })
+      .catch((err) => {
+        if (err.response) {
+          alert("Invalid Credentials");
+        } else alert("Something went wrong");
+      });
+  };
 
                 if (res.status === 200) {
                     alert("Login successful!!");
