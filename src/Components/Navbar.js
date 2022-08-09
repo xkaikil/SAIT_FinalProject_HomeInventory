@@ -10,6 +10,9 @@ import {
   Route, Link
 } from "react-router-dom";
 
+//translation
+import { useTranslation, Trans } from 'react-i18next';
+
 //custom css
 import './navbar.css';
 
@@ -21,6 +24,7 @@ import Logout from "./Logout";
 import HomePage from "./HomePage";
 import SignUp from "./Registration.component";
 import LogIn from "./LogIn.component";
+import LanguageToggle from "./LanguageToggle";
 
 class Navibar extends React.Component {
   constructor(props) {
@@ -43,7 +47,7 @@ class Navibar extends React.Component {
 
         <Link to={"/login"}
           className="nav-link">
-          LogIn
+          Login
         </Link>
 
     }
@@ -78,7 +82,9 @@ class Navibar extends React.Component {
                     {logInOut}
                   </Nav>
                 </Nav>
+                <LanguageToggle/>
               </Container>
+              
             </Navbar>
           </header>
 
@@ -106,7 +112,6 @@ class Navibar extends React.Component {
                     <Route path="/signup"
                       element={<SignUp />} />
                   </Routes>
-
                 </div>
               </Col>
             </Row>

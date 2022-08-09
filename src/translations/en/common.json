@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "navbar": {
+          "logout": "Log Out",
+          "login": "Log In",
+          "inventory": "Inventory",
+          "guest": "Guest"
+        },
+        "home": {
+          "tagline": "Inventory your belongings with HOME nVentory",
+          "description1": "Find the right insurance that you need",
+          "description2": "Make filing claims hassle free",
+          "description3": "it's free and easy to use!",
+          "button": "Start inventorying now!"
+        }
+      }
+}

@@ -1,4 +1,5 @@
 const Inventory = () => {
+    
     return (
         <div>
             Inventory

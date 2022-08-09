@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "navbar": {
+          "logout": "Se déconnecter",
+          "login": "Connexion",
+          "inventory": "Inventaire",
+          "guest": "l' Invité"
+        },
+        "home": {
+          "tagline": "Inventoriez vos biens avec HOME nVentory",
+          "description1": "Trouvez la bonne assurance dont vous avez besoin",
+          "description2": "Simplifiez le dépôt des réclamations",
+          "description3": "C'est gratuit et facile à utiliser!",
+          "button": "Commencez à faire l'inventaire maintenant!"
+        }
+      }
+}
