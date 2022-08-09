@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 
-const InventoryForm = (prop) => {
+const InventoryForm = (props) => {
     const validationSchema = Yup.object().shape({
         category: Yup.string().required("Required"),
         name: Yup.string().required("Required"),
