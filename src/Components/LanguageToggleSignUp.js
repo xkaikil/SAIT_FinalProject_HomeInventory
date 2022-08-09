@@ -7,24 +7,20 @@ const lngs = {
   false: { nativeName: 'French' }
 };
 
-const LanguageToggle = ({ label }) => {
+const LanguageToggleSignUp = ({ label }) => {
   const { t, i18n } = useTranslation();
   return (
     <label className="switch">
-        <input type="checkbox" id="lng_toggle" onClick={() => {
-            var checked = document.getElementById('lng_toggle').checked;
+        <input type="checkbox" id="lng_toggle_signup" onClick={() => {
+            var checked = document.getElementById('lng_toggle_signup').checked;
             if (checked) {
               i18n.changeLanguage("fr");
               console.log("FRENCH");
-              if (document.getElementById('lng_toggle_signup')) {
-              document.getElementById('lng_toggle_signup').checked = true;
-              }
+              document.getElementById('lng_toggle').checked = true;
             } else {
               i18n.changeLanguage("en");
               console.log("ENGLISH");
-              if (document.getElementById('lng_toggle_signup')) {
-                document.getElementById('lng_toggle_signup').checked = false;
-              }
+              document.getElementById('lng_toggle').checked = false;
             }
         }}></input>
         <span className="slider"/>
@@ -32,5 +28,5 @@ const LanguageToggle = ({ label }) => {
   );
 };
 
-export default LanguageToggle;
+export default LanguageToggleSignUp;
 

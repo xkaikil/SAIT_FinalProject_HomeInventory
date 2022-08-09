@@ -35,6 +35,8 @@ i18n
           login: {
             alreadyHaveAnAccount: "Already have an account?",
             firstName: "First Name",
+            languageChosen: "English",
+            languagePreference: "Language Preference",
             lastName: "Last Name",
             newUser: "New User",
             password: "Password",
@@ -60,6 +62,8 @@ i18n
             login: {
                 alreadyHaveAnAccount: "Vous avez déjà un compte?",
                 firstName: "Le prénom",
+                languageChosen: "Français",
+                languagePreference: "Préférence de Langue",
                 lastName: "Le nom de famille",
                 newUser: "Nouvel utilisateur",
                 password: "Le mot de passe",

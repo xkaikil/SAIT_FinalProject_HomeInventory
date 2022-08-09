@@ -5,6 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useTranslation, Trans } from 'react-i18next';
+import LanguageToggleSignUp from "./LanguageToggleSignUp";
 
 const SignUpForm = (props) => {
   const { t, i18n } = useTranslation();
@@ -26,6 +27,14 @@ const SignUpForm = (props) => {
         initialValues={{ firstName: "", lastName: "", email: "", password: "" }}
       >
         <Form>
+        <FormGroup className="languagePreference">
+          {t('login.languagePreference')}:
+            <br/>
+          {t('login.languageChosen')}
+            <br/>
+            <LanguageToggleSignUp/>
+          </FormGroup>
+          <br/>
           <FormGroup className="firstName">
           {t('login.firstName')}:
             <Field name="firstName" type="text" className="field-control" />
