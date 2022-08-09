@@ -15,6 +15,11 @@ const LogIn = () => {
 
                 if (res.status === 200) {
                     alert("Login successful!!");
+
+                    localStorage.setItem('user',JSON.stringify(res.data));
+
+                    console.log(res.data);
+                    window.location.reload(false);
                 }  else Promise.reject();
             })
             .catch((err) => {

@@ -2,6 +2,7 @@ let mongoose = require("mongoose"),
   express = require("express"),
   router = express.Router();
 
+const { ResourceStore } = require("i18next");
 // Users Model
 let userSchema = require("../models/Users");
 
@@ -19,6 +20,30 @@ router.post("/create-user", (req, res, next) => {
   });
 });
 
+
+//Validate Login
+router.post("/login", (req, res, next) => {
+  userSchema
+    .findOne({
+      email: req.body.email,
+      password: req.body.password,
+    }, (error,data) => {
+      if (error) {
+        return next(error);
+      }if (!data) {
+        return res.status(401).end('Invalid Credentials');
+      } else {
+        res.status(200).json({
+          name: data.firstName,
+          id: data._id
+        });
+      }
+    })
+    
+  
+
+    /**
+     * 
 // Read Users
 router.get("/", (req, res) => {
   userSchema.find((error, data) => {
@@ -29,6 +54,8 @@ router.get("/", (req, res) => {
     }
   });
 });
+
+
 
 // Update Users
 router
@@ -75,37 +102,7 @@ router.delete("/delete-user/:id", (req, res, next) => {
     }
   });
 });
-
-//Validate Login
-router.post("/login", (req, res, next) => {
-  userSchema
-    .findOne({
-      email: req.body.email,
-      password: req.body.password,
-    }, (error,data) => {
-      if (error) {
-        return next(error);
-      }if (!data) {
-        return res.status(401).end('Invalid Credentials');
-      } else {
-        res.status(200).json({
-          msg: data,
-        });
-      }
-    })
-    
-      /** 
-      if (data.password === req.body.password) {
-        res.json(data);
-        console.log("User logged in successfully !");
-      } else {
-        console.log("Password or email is not correct!");
-        res.json({
-          message: "wrong credentials",
-        });
-      }
-      */
-    
+     */
 });
 
 module.exports = router;
