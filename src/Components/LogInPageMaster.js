@@ -5,6 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import { useTranslation, Trans } from 'react-i18next';
+
 const LogInPageMaster = (props) => {
   const { t, i18n } = useTranslation();
   const validationSchema = Yup.object().shape({
@@ -24,7 +25,7 @@ const LogInPageMaster = (props) => {
       >
         <Form>
           <FormGroup className="email">
-            {/* "E-mail" does not require a French translation */}
+            {/* "E-mail" label does not require a French translation */}
             E-mail:
             <Field name="email" type="email" id="email" className="field-control" />
             <ErrorMessage

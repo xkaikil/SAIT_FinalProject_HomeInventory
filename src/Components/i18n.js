@@ -33,8 +33,12 @@ i18n
             button: 'Start inventorying now!'
           },
           login: {
+            alreadyHaveAnAccount: "Already have an account?",
+            firstName: "First Name",
+            lastName: "Last Name",
             newUser: "New User",
-            password: "Password"
+            password: "Password",
+            register: "Register"
           }
         }
       },
@@ -54,8 +58,12 @@ i18n
               button: 'Commencez à faire l\'inventaire maintenant!'
             },
             login: {
+                alreadyHaveAnAccount: "Vous avez déjà un compte?",
+                firstName: "Le prénom",
+                lastName: "Le nom de famille",
                 newUser: "Nouvel utilisateur",
-                password: "Le mot de passe"
+                password: "Le mot de passe",
+                register: "Inscrire"
             }
         }
       }

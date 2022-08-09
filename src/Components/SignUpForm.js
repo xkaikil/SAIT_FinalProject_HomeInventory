@@ -4,8 +4,10 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useTranslation, Trans } from 'react-i18next';
 
 const SignUpForm = (props) => {
+  const { t, i18n } = useTranslation();
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("Required"),
     lastName: Yup.string().required("Required"),
@@ -25,7 +27,7 @@ const SignUpForm = (props) => {
       >
         <Form>
           <FormGroup className="firstName">
-            First Name:
+          {t('login.firstName')}:
             <Field name="firstName" type="text" className="field-control" />
             <ErrorMessage
               name="first"
@@ -34,7 +36,7 @@ const SignUpForm = (props) => {
             />
           </FormGroup>
           <FormGroup className="lastName">
-            Last Name:
+          {t('login.lastName')}:
             <Field name="lastName" type="text" className="field-control" />
             <ErrorMessage
               name="last"
@@ -43,7 +45,8 @@ const SignUpForm = (props) => {
             />
           </FormGroup>
           <FormGroup className="email">
-            Email:
+            {/* E-mail label does not require a French Translation */}
+            E-mail:
             <Field name="email" type="text" className="field-control" />
             <ErrorMessage
               name="first"
@@ -52,7 +55,7 @@ const SignUpForm = (props) => {
             />
           </FormGroup>
           <FormGroup className="password">
-            password:
+            {t('login.password')}:
             <Field name="password" type="password" className="field-control" />
             <ErrorMessage
               name="password"
@@ -65,7 +68,7 @@ const SignUpForm = (props) => {
               {props.children}
             </Button>
           </div>
-          <Link to="/login">Already have an account? </Link>
+          <Link to="/login">{t('login.alreadyHaveAnAccount')} </Link>
         </Form>
       </Formik>
     </div>
