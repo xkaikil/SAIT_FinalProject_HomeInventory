@@ -75,7 +75,7 @@ const Navibar = () => {
                   <Nav>
                     <Link to={"/inventory"}
                       className="nav-link">
-                       {t('navbar.inventory')}
+                      {t('navbar.inventory')}
                     </Link>
                   </Nav>
 
@@ -90,9 +90,9 @@ const Navibar = () => {
                     {logInOut}
                   </Nav>
                 </Nav>
-                <LanguageToggleNavBar/>
+                <LanguageToggleNavBar />
               </Container>
-              
+
             </Navbar>
           </header>
 
@@ -105,8 +105,10 @@ const Navibar = () => {
                       element={<Account />} />
 
                     <Route path="/inventory"
-                      element={<Inventory/>} />
+                      element={<Inventory />} />
 
+                    <Route path="/inventory/edit-item"
+                      element={<EditItem/>} />
 
                     <Route path="/logout"
                       element={<Logout />} />
@@ -120,9 +122,9 @@ const Navibar = () => {
                     <Route path="/signup"
                       element={<SignUp />} />
 
-                      <Route exact path="/emailVerification"
+                    <Route exact path="/emailVerification"
                       element={<Verification />} />
-                    
+
                   </Routes>
                 </div>
               </Col>
