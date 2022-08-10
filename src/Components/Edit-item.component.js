@@ -24,7 +24,8 @@ const EditItem = (props) => {
                     props.history.push("/inventory");
                 } else Promise.reject();
             })
-            .catch((err) => alert("Something went wrong"));
+            // .catch((err) => alert("Something went wrong"));
+            .catch((err) => console.log(err));
     };
 
     useEffect(() => {

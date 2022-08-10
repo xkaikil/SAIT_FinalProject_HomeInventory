@@ -20,8 +20,7 @@ const InventoryForm = (props) => {
     <div className="inventory-form">
       <Formik
         {...props}
-        validationSchema={validationSchema}
-        initialValues={{ category: "", name: "", price: "" }}
+        validationSchema={validationSchema}        
       >
         <Form>
           <FormGroup className="categoryBlock">
