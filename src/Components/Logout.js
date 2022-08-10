@@ -10,18 +10,20 @@ export class Logout extends Component {
 
     logoutHandler = () => {
         localStorage.setItem('user', []);
-        
+        window.location.reload();
+        alert("logged out succesfully");
         
     }
+
   render() {
     
     
     return (
         <div className='logout-wrapper'>
         <h1>Are you sure you want to log out?</h1>
-        <Link to="/account">
+
         <button onClick={this.logoutHandler}>Yes, Log me out</button>
-        </Link>
+
         </div>
     )
     } 

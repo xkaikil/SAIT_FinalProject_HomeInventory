@@ -1,19 +1,32 @@
+import { reloadResources } from 'i18next';
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 export class Account extends Component {
 
-    componentDidMount(){
-        window.location.reload();
-    }
+  constructor(props) {
+    super(props);
+
+  }
   render() {
-    let user = JSON.parse(localStorage.getItem('user'));
-    return (
-      <div>Account-View:
-        <h1>User: {user.name}</h1>
-        <h1>IS: {user.id}</h1>
-      </div>
-    )
+    try {
+      let user = JSON.parse(localStorage.getItem('user'));
+
+
+      return (
+        <div>
+          <h1>Account-View:</h1>
+          <h1>User: {user.name}</h1>
+          <h1>ID: {user.id}</h1>
+        </div>
+      )
+
+    } catch (err) {
+      console.log(err)
+      return (
+        <h1>Please login</h1>
+      )
+    }
   }
 }
 
