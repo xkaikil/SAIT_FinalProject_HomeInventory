@@ -25,6 +25,8 @@ import HomePage from "./HomePage";
 import SignUp from "./Registration.component";
 import LogIn from "./LogIn.component";
 import LanguageToggle from "./LanguageToggle";
+import Verification from "./EmailVerification";
+
 
 class Navibar extends React.Component {
   constructor(props) {
@@ -97,7 +99,7 @@ class Navibar extends React.Component {
                       element={<Account />} />
 
                     <Route path="/inventory"
-                      element={<Inventory />} />
+                      element={<Inventory/>} />
 
 
                     <Route path="/logout"
@@ -111,6 +113,10 @@ class Navibar extends React.Component {
 
                     <Route path="/signup"
                       element={<SignUp />} />
+
+                      <Route exact path="/emailVerification"
+                      element={<Verification />} />
+                    
                   </Routes>
                 </div>
               </Col>

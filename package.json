@@ -1,50 +1,267 @@
 {
-  "name": "project-group1",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^0.27.2",
-    "bootstrap": "^5.2.0",
-    "formik": "^2.2.9",
-    "i18next": "^21.9.0",
-    "i18next-browser-languagedetector": "^6.1.4",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.5.0-beta.1",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "translate": "^1.4.1",
-    "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
-  },
-  "scripts": {
-    "start": "set PORT=4000 && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "react-i18next": "^11.18.3"
-  }
+  
+
+"name": "project-group1",
+  
+
+"version": "0.1.0",
+  
+
+"private": true,
+  
+
+"dependencies": {
+  
+
+  
+
+"@sendgrid/mail": "^7.7.0",
+  
+
+  
+
+"@testing-library/jest-dom": "^5.16.4",
+  
+
+  
+
+"@testing-library/react": "^13.3.0",
+  
+
+  
+
+"@testing-library/user-event": "^13.5.0",
+  
+
+  
+
+"axios": "^0.27.2",
+  
+
+  
+
+"bootstrap": "^5.2.0",
+  
+
+  
+
+"formik": "^2.2.9",
+  
+
+  
+
+"i18n": "^0.15.0",
+  
+
+  
+
+"i18next": "^21.9.0",
+  
+
+  
+
+"i18next-browser-languagedetector": "^6.1.4",
+  
+
+  
+
+"node": "^18.7.0",
+  
+
+  
+
+"nodejs": "^0.0.0",
+  
+
+  
+
+"path": "^0.12.7",
+  
+
+  
+
+"react": "^18.2.0",
+  
+
+  
+
+"react-bootstrap": "^2.5.0-beta.1",
+  
+
+  
+
+"react-dom": "^18.2.0",
+  
+
+  
+
+"react-router-dom": "^6.3.0",
+  
+
+  
+
+"react-scripts": "5.0.1",
+  
+
+  
+
+"stream": "^0.0.2",
+  
+
+  
+
+"translate": "^1.4.1",
+  
+
+  
+
+"web-vitals": "^2.1.4",
+  
+
+  
+
+"yup": "^0.32.11"
+  
+
+},
+  
+
+"scripts": {
+  
+
+  
+
+"start": "set PORT=4000 && react-scripts start",
+  
+
+  
+
+"build": "react-scripts build",
+  
+
+  
+
+"test": "react-scripts test",
+  
+
+  
+
+"eject": "react-scripts eject"
+  
+
+},
+  
+
+"eslintConfig": {
+  
+
+  
+
+"extends": [
+  
+
+  
+
+  
+
+"react-app",
+  
+
+  
+
+  
+
+"react-app/jest"
+  
+
+  
+
+]
+  
+
+},
+  
+
+"browserslist": {
+  
+
+  
+
+"production": [
+  
+
+  
+
+  
+
+">0.2%",
+  
+
+  
+
+  
+
+"not dead",
+  
+
+  
+
+  
+
+"not op_mini all"
+  
+
+  
+
+],
+  
+
+  
+
+"development": [
+  
+
+  
+
+  
+
+"last 1 chrome version",
+  
+
+  
+
+  
+
+"last 1 firefox version",
+  
+
+  
+
+  
+
+"last 1 safari version"
+  
+
+  
+
+]
+  
+
+},
+  
+
+"devDependencies": {
+  
+
+  
+
+"path-browserify": "^1.0.1",
+  
+
+  
+
+"react-i18next": "^11.18.3"
+  
+
+}
 }
