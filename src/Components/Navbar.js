@@ -23,6 +23,8 @@ import LogIn from "./LogIn.component";
 import LanguageToggleNavBar from "./LanguageToggleNavBar";
 import Verification from "./EmailVerification";
 import CreateItem from "./create-item.component";
+import InventoryList from "./InvList.component";
+import EditItem from "./Edit-item.component";
 
 
 const Navibar = () => {
@@ -57,7 +59,7 @@ const Navibar = () => {
 
         <Link to={"/login"}
           className="nav-link">
-           {t('navbar.login')}
+          {t('navbar.login')}
         </Link>
 
     }
@@ -77,7 +79,7 @@ const Navibar = () => {
                   <Nav>
                     <Link to={"/inventory"}
                       className="nav-link">
-                       {t('navbar.inventory')}
+                      {t('navbar.inventory')}
                     </Link>
                   </Nav>
 
@@ -92,9 +94,9 @@ const Navibar = () => {
                     {logInOut}
                   </Nav>
                 </Nav>
-                <LanguageToggleNavBar/>
+                <LanguageToggleNavBar />
               </Container>
-              
+
             </Navbar>
           </header>
 
@@ -107,7 +109,7 @@ const Navibar = () => {
                       element={<Account />} />
 
                     <Route path="/inventory"
-                      element={<Inventory/>} />
+                      element={<Inventory />} />
 
 
                     <Route path="/logout"
@@ -122,9 +124,9 @@ const Navibar = () => {
                     <Route path="/signup"
                       element={<SignUp />} />
 
-                      <Route exact path="/emailVerification"
+                    <Route exact path="/emailVerification"
                       element={<Verification />} />
-                    
+
                   </Routes>
                 </div>
               </Col>
@@ -162,7 +164,7 @@ const Navibar = () => {
               <Nav className="justify-content-end">
                 <Nav>
                   <Link to={"/inventory"} className="nav-link">
-                  {t('navbar.inventory')}
+                    {t('navbar.inventory')}
                   </Link>
                 </Nav>
 
@@ -186,11 +188,16 @@ const Navibar = () => {
                 <Routes>
                   <Route exact path="/account" element={<Account />} />
 
-                  <Route path="/inventory" element={<CreateItem />} />
+                  <Route path="/inventory" element={<InventoryList />} />
 
                   <Route
                     path="/inventory/create-item"
                     element={<CreateItem />}
+                  />
+
+                  <Route
+                    path="/inventory/edit-item/:id"
+                    element={<EditItem />}
                   />
 
                   <Route path="/logout" element={<Logout />} />

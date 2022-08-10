@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Table } from "react-bootstrap";
 import InventoryRow from "./InventoryRow";
+import { Link } from "react-router-dom";
 
 
 const InventoryList = () => {
@@ -40,7 +41,7 @@ const InventoryList = () => {
                 </Table>
             </div>
             <div>
-                <Link to={"/create-item/"}
+                <Link to={"/inventory/create-item"}
                     className="createItem">
                     Add item
                 </Link>
@@ -48,3 +49,5 @@ const InventoryList = () => {
         </div>
     )
 };
+
+export default InventoryList;
