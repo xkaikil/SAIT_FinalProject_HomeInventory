@@ -8,3 +8,13 @@
     font-weight: bolder;
     
 }
+
+a:link {
+    color:rgb(0, 247, 255);
+  }
+  a:visited {
+    color:rgb(153, 0, 255);
+  }
+  a:hover {
+    color:rgb(0, 247, 255);
+  }

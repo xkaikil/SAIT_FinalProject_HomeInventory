@@ -3,7 +3,7 @@ import "./App.css";
 import { useTranslation, Trans } from 'react-i18next';
 
 import Navibar from "./Components/Navbar";
-import LanguageToggle from "./Components/LanguageToggle";
+import LanguageToggleNavBar from "./Components/LanguageToggleNavBar";
 
 const lngs = {
   en: { nativeName: 'English' },

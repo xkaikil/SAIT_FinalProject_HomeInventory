@@ -16,11 +16,11 @@ const LanguageToggleSignUp = ({ label }) => {
             if (checked) {
               i18n.changeLanguage("fr");
               console.log("FRENCH");
-              document.getElementById('lng_toggle').checked = true;
+              document.getElementById('lng_toggle_navbar').checked = true;
             } else {
               i18n.changeLanguage("en");
               console.log("ENGLISH");
-              document.getElementById('lng_toggle').checked = false;
+              document.getElementById('lng_toggle_navbar').checked = false;
             }
         }}></input>
         <span className="slider"/>

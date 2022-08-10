@@ -2,8 +2,10 @@ import React from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
+import { useTranslation, Trans } from 'react-i18next';
 
 const InventoryForm = (props) => {
+  const { t, i18n } = useTranslation();
   const validationSchema = Yup.object().shape({
     category: Yup.string().required("Required"),
     name: Yup.string().required("Required"),
@@ -23,7 +25,7 @@ const InventoryForm = (props) => {
       >
         <Form>
           <FormGroup className="categoryBlock">
-            Category:
+          {t('inventory.category')}:
             <Field name="category" type="text" className="form-control" />
             <ErrorMessage
               name="category"
@@ -32,7 +34,7 @@ const InventoryForm = (props) => {
             />
           </FormGroup>
           <FormGroup className="nameBlock">
-            Name:
+          {t('inventory.name')}:
             <Field name="name" type="text" className="form-control" />
             <ErrorMessage
               name="name"
@@ -41,7 +43,7 @@ const InventoryForm = (props) => {
             />
           </FormGroup>
           <FormGroup className="priceBlock">
-            Price:
+          {t('inventory.price')}:
             <Field name="price" type="text" className="form-control" />
             <ErrorMessage
               name="price"

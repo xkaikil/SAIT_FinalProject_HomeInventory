@@ -37,6 +37,12 @@ input {
   text-decoration: none;
 }
 
-a {
+a:link {
   color:rgb(0, 247, 255);
+}
+a:visited {
+  color:#c56fff;
+}
+a:hover {
+  color:rgb(0, 195, 255);
 }

@@ -25,6 +25,12 @@ i18n
             inventory: 'Inventory',
             guest: 'Guest'
           },
+          inventory: {
+            addItem: "Add Item",
+            category: "Category",
+            name: "Name",
+            price: "Price"
+          },
           home: {
             tagline: 'Inventory your belongings with HOME nVentory',
             description1: 'Find the right insurance that you need',
@@ -51,6 +57,12 @@ i18n
                 login: 'Connexion',
                 inventory: 'Inventaire',
                 guest: 'l\' invité'
+            },
+            inventory: {
+                addItem: "Ajouter un Item",
+                category: "Catégorie",
+                name: "Le Nom",
+                price: "Prix"
             },
             home: {
               tagline: 'Inventoriez vos biens avec HOME nVentory',

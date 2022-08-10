@@ -7,12 +7,12 @@ const lngs = {
   false: { nativeName: 'French' }
 };
 
-const LanguageToggle = ({ label }) => {
+const LanguageToggleNavBar = ({ label }) => {
   const { t, i18n } = useTranslation();
   return (
     <label className="switch">
-        <input type="checkbox" id="lng_toggle" onClick={() => {
-            var checked = document.getElementById('lng_toggle').checked;
+        <input type="checkbox" id="lng_toggle_navbar" onClick={() => {
+            var checked = document.getElementById('lng_toggle_navbar').checked;
             if (checked) {
               i18n.changeLanguage("fr");
               console.log("FRENCH");
@@ -32,5 +32,5 @@ const LanguageToggle = ({ label }) => {
   );
 };
 
-export default LanguageToggle;
+export default LanguageToggleNavBar;
 

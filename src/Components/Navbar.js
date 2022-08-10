@@ -20,10 +20,11 @@ import Logout from "./Logout";
 import HomePage from "./HomePage";
 import SignUp from "./Registration.component";
 import LogIn from "./LogIn.component";
-import LanguageToggle from "./LanguageToggle";
+import LanguageToggleNavBar from "./LanguageToggleNavBar";
 import CreateItem from "./create-item.component";
 
 const Navibar = () => {
+  const { t, i18n } = useTranslation();
   const [user, setUser] = React.useState({
     name: "Guest",
     id: null,
@@ -38,13 +39,13 @@ const Navibar = () => {
   if (user.id === null) {
     logInOut = (
       <Link to={"/login"} className="nav-link">
-        Login
+        {t('navbar.login')}
       </Link>
     );
   } else {
     logInOut = (
       <Link to={"/logout"} className="nav-link">
-        Logout
+        {t('navbar.logout')}
       </Link>
     );
   }
@@ -75,7 +76,7 @@ const Navibar = () => {
               <Nav className="justify-content-end">
                 <Nav>
                   <Link to={"/inventory"} className="nav-link">
-                    Inventory
+                  {t('navbar.inventory')}
                   </Link>
                 </Nav>
 
@@ -87,7 +88,7 @@ const Navibar = () => {
 
                 <Nav>{logInOut}</Nav>
               </Nav>
-              <LanguageToggle />
+              <LanguageToggleNavBar />
             </Container>
           </Navbar>
         </header>
