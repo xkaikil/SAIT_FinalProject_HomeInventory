@@ -1,3 +1,4 @@
+
 {
   "name": "project-group1",
   "version": "0.1.0",
@@ -48,3 +49,4 @@
     "react-i18next": "^11.18.3"
   }
 }
+

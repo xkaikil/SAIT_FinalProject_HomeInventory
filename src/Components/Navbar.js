@@ -21,7 +21,9 @@ import HomePage from "./HomePage";
 import SignUp from "./Registration.component";
 import LogIn from "./LogIn.component";
 import LanguageToggleNavBar from "./LanguageToggleNavBar";
+import Verification from "./EmailVerification";
 import CreateItem from "./create-item.component";
+
 
 const Navibar = () => {
   const { t, i18n } = useTranslation();
@@ -47,7 +49,91 @@ const Navibar = () => {
       <Link to={"/logout"} className="nav-link">
         {t('navbar.logout')}
       </Link>
+
+
+    )
+    if (this.state.loggedIn == false) {
+      logInOut =
+
+        <Link to={"/login"}
+          className="nav-link">
+           {t('navbar.login')}
+        </Link>
+
+    }
+    return (
+      <Router>
+        <div className="nav-wrapper">
+          <header className="header">
+            <Navbar className="navbar" bg='dark' variant='dark'>
+              <Container>
+                <Navbar.Brand>
+                  <Link to={"/"}>
+                    <img src={headerImg} className='headerlogo' />
+                  </Link>
+                </Navbar.Brand>
+
+                <Nav className="justify-content-end">
+                  <Nav>
+                    <Link to={"/inventory"}
+                      className="nav-link">
+                       {t('navbar.inventory')}
+                    </Link>
+                  </Nav>
+
+                  <Nav>
+                    <Link to={"/account"}
+                      className="nav-link">
+                      {this.state.user}
+                    </Link>
+                  </Nav>
+
+                  <Nav>
+                    {logInOut}
+                  </Nav>
+                </Nav>
+                <LanguageToggleNavBar/>
+              </Container>
+              
+            </Navbar>
+          </header>
+
+          <Container>
+            <Row>
+              <Col md={12}>
+                <div className="wrapper">
+                  <Routes>
+                    <Route exact path="/account"
+                      element={<Account />} />
+
+                    <Route path="/inventory"
+                      element={<Inventory/>} />
+
+
+                    <Route path="/logout"
+                      element={<Logout />} />
+
+                    <Route path="/"
+                      element={<HomePage />} />
+
+                    <Route path="/login"
+                      element={<LogIn />} />
+
+                    <Route path="/signup"
+                      element={<SignUp />} />
+
+                      <Route exact path="/emailVerification"
+                      element={<Verification />} />
+                    
+                  </Routes>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </Router>
     );
+
   }
 
   React.useEffect(() => {

@@ -1,3 +1,4 @@
+
 let mongoose = require("mongoose"),
   express = require("express"),
   router = express.Router();
@@ -14,7 +15,23 @@ router.post("/create-user", (req, res, next) => {
     if (error) {
       return next(error);
     } else {
-      console.log(data);
+      const sgMail = require('@sendgrid/mail')
+      sgMail.setApiKey("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")
+      const msg = {
+        to: req.body.email, // Change to your recipient
+        from: 'huangjason812@gmail.com', // Change to your verified sender
+        subject: 'Verification Link',
+        text: 'Verification email',
+        html: '<strong>Verification email </strong>',
+      }
+      sgMail
+        .send(msg)
+        .then(() => {
+          console.log('Email sent')
+        })
+        .catch((error) => {
+          console.error(error)
+        })
       res.json(data);
     }
   });
