@@ -15,13 +15,11 @@ const LanguageToggleNavBar = ({ label }) => {
             var checked = document.getElementById('lng_toggle_navbar').checked;
             if (checked) {
               i18n.changeLanguage("fr");
-              console.log("FRENCH");
               if (document.getElementById('lng_toggle_signup')) {
               document.getElementById('lng_toggle_signup').checked = true;
               }
             } else {
               i18n.changeLanguage("en");
-              console.log("ENGLISH");
               if (document.getElementById('lng_toggle_signup')) {
                 document.getElementById('lng_toggle_signup').checked = false;
               }

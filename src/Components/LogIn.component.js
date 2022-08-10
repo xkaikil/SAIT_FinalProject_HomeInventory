@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import LogInPageMaster from "./LogInPageMaster";
+import { useTranslation, Trans } from 'react-i18next';
 
 const LogIn = () => {
+  const { t, i18n } = useTranslation();
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
@@ -30,7 +32,7 @@ const LogIn = () => {
 
     return (
         <LogInPageMaster initialValue={formValues} onSubmit={onSubmit} enableReinitialize>
-            Log In
+            {t('navbar.login')}
         </LogInPageMaster>
     );
 }

@@ -136,16 +136,16 @@ const Navibar = () => {
 
   }
 
-  React.useEffect(() => {
-    try {
-      let user = JSON.parse(localStorage.getItem("user"));
-      if (user) {
-        setUser(user);
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }, []);
+  // React.useEffect(() => {
+  //   try {
+  //     let user = JSON.parse(localStorage.getItem("user"));
+  //     if (user) {
+  //       setUser(user);
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }, []);
 
   return (
     <Router>

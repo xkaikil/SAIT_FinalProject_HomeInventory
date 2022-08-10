@@ -47,6 +47,9 @@ i18n
             newUser: "New User",
             password: "Password",
             register: "Register"
+          },
+          profile: {
+            updateUser: "Update User"
           }
         }
       },
@@ -80,6 +83,9 @@ i18n
                 newUser: "Nouvel utilisateur",
                 password: "Le mot de passe",
                 register: "Inscrire"
+            },
+            profile: {
+              updateUser: "Mettre à jour l'utilisateur"
             }
         }
       }

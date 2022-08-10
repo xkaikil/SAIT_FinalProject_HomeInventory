@@ -1,8 +1,10 @@
 import axios from "axios";
 import InventoryForm from "./InventoryForm";
 import React, { useState } from "react";
+import { useTranslation, Trans } from 'react-i18next';
 
 const CreateItem = () => {
+  const { t, i18n } = useTranslation();
   const [formValues, setFormValues] = useState({
     category: "",
     name: "",
@@ -24,7 +26,7 @@ const CreateItem = () => {
       onSubmit={onSubmit}
       enableReinitialize
     >
-      Add item
+      {t('inventory.addItem')}
     </InventoryForm>
   );
 };
