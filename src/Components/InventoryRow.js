@@ -29,11 +29,11 @@ const InventoryRow = (props) => {
                 <td>
                     <Link className="edit-link"
                         to={"/edit-item/" + _id}>
-                        Edit
+                        {t('inventory.edit')}
                     </Link>
                     <Button onClick={deleteItem}
                         size="sm" variant="danger">
-                        Delete
+                        {t('inventory.delete')}
                     </Button>
                 </td>
             </tr>            

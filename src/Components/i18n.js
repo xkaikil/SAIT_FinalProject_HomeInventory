@@ -28,6 +28,8 @@ i18n
           inventory: {
             addItem: "Add Item",
             category: "Category",
+            delete: "Delete",
+            edit: "Edit",
             name: "Name",
             price: "Price"
           },
@@ -44,11 +46,14 @@ i18n
             languageChosen: "English",
             languagePreference: "Language Preference",
             lastName: "Last Name",
+            logOut: "Log Out",
+            logOutConfirm: "Are you sure you want to log out?",
             newUser: "New User",
             password: "Password",
             register: "Register"
           },
           profile: {
+            accountCreated: "Account Created. In order to login, you have activate your account click the link of the email sent to your account.",
             updateUser: "Update User"
           }
         }
@@ -64,6 +69,8 @@ i18n
             inventory: {
                 addItem: "Ajouter un Item",
                 category: "Catégorie",
+                delete: "Effacer",
+                edit: "Éditer",
                 name: "Le Nom",
                 price: "Prix"
             },
@@ -80,11 +87,13 @@ i18n
                 languageChosen: "Français",
                 languagePreference: "Préférence de Langue",
                 lastName: "Le nom de famille",
+                logOutConfirm: "Êtes-vous sûr de vouloir vous déconnecter?",
                 newUser: "Nouvel utilisateur",
                 password: "Le mot de passe",
                 register: "Inscrire"
             },
             profile: {
+                accountCreated: "Compte créé. Pour vous connecter, vous devez activer votre compte en cliquant sur le lien de l'e-mail envoyé à votre compte.",
               updateUser: "Mettre à jour l'utilisateur"
             }
         }

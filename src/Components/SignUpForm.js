@@ -4,11 +4,11 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation} from 'react-i18next';
 import LanguageToggleSignUp from "./LanguageToggleSignUp";
 
 const SignUpForm = (props) => {
-  const { t, i18n } = useTranslation();
+  const {t} = useTranslation();
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("Required"),
     lastName: Yup.string().required("Required"),
@@ -72,6 +72,7 @@ const SignUpForm = (props) => {
               component="span"
             />
           </FormGroup>
+          <br/>
           <div className="regisButton">
             <Button variant="danger" size="lg" block="block" type="submit">
               {props.children}

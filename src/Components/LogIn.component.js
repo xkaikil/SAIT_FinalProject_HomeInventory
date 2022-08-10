@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import LogInPageMaster from "./LogInPageMaster";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation} from 'react-i18next';
 
 const LogIn = () => {
-  const { t, i18n } = useTranslation();
+  const { t} = useTranslation();
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",

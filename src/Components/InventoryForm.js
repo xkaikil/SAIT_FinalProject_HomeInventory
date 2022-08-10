@@ -2,10 +2,10 @@ import React from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation} from 'react-i18next';
 
 const InventoryForm = (props) => {
-  const { t, i18n } = useTranslation();
+  const {t} = useTranslation();
   const validationSchema = Yup.object().shape({
     category: Yup.string().required("Required"),
     name: Yup.string().required("Required"),

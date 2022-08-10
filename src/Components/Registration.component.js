@@ -4,12 +4,12 @@ import SignUpForm from "./SignUpForm";
 import { useNavigate } from "react-router-dom";
 import { render } from "react-dom";
 import { Link } from "react-router-dom";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation} from 'react-i18next';
 
 
 
 const RegisUser = () => {
-    const { t, i18n } = useTranslation();
+    const {t} = useTranslation();
     let navigate = useNavigate();
 
 

@@ -1,10 +1,10 @@
 import axios from "axios";
 import InventoryForm from "./InventoryForm";
 import React, { useState } from "react";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation} from 'react-i18next';
 
 const CreateItem = () => {
-  const { t, i18n } = useTranslation();
+  const { t} = useTranslation();
   const [formValues, setFormValues] = useState({
     category: "",
     name: "",

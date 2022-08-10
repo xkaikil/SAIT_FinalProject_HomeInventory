@@ -4,10 +4,10 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation} from 'react-i18next';
 
 const LogInPageMaster = (props) => {
-  const { t, i18n } = useTranslation();
+  const { t} = useTranslation();
   const validationSchema = Yup.object().shape({
     email: Yup.string()
       .email("You have to enter an invalid email address")
@@ -50,6 +50,7 @@ const LogInPageMaster = (props) => {
               {props.children}
             </Button>
           </div>
+          <br/>
           <Link to="/signup">{t('login.newUser')}?</Link>
         </Form>
       </Formik>
