@@ -24,10 +24,13 @@ const InventoryList = () => {
             return <InventoryRow obj={res} key={i} />;
         });
     };
+    
+    
 
     return (
         <div>
             <div className="table-wrapper">
+                <h1>Inventory List</h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

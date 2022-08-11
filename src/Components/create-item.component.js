@@ -2,9 +2,10 @@ import axios from "axios";
 import InventoryForm from "./InventoryForm";
 import React, { useState } from "react";
 import { useTranslation} from 'react-i18next';
-
+import { useNavigate } from "react-router-dom";
 const CreateItem = () => {
   const { t} = useTranslation();
+  let navigate = useNavigate();
   const [formValues, setFormValues] = useState({
     category: "",
     name: "",
@@ -14,7 +15,10 @@ const CreateItem = () => {
     axios
       .post("http://localhost:4000/inventory/create-item", itemObject)
       .then((res) => {
-        if (res.status === 200) alert("Item successfully created");
+        if (res.status === 200) {
+        alert("Item successfully created");
+        navigate('/inventory');
+        }
         else Promise.reject();
       })
       .catch((err) => alert("Something went wrong"));
