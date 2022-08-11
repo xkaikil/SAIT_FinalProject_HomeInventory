@@ -8,7 +8,7 @@ const UserTableRow = (props) => {
 
     const deleteUser = () => {
         axios
-            .delete("http://localhost:4000/users/delete-user/" + _id)
+            .delete("http://localhost:4000/admin/delete-user/" + _id)
             .then((res) => {
                 if (res.status === 200) {
                     alert("User Successfully deleted");

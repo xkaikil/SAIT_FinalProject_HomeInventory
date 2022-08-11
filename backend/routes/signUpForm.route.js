@@ -55,7 +55,8 @@ router.post("/login", (req, res, next) => {
       } else {
         res.status(200).json({
           name: data.firstName,
-          id: data._id
+          id: data._id,
+          role: data.role
         });
       }
     })

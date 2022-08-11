@@ -9,6 +9,7 @@ const path = require('path');
 const userRoute = require("../backend/routes/signUpForm.route");
 const otherRoutes = require("../backend/routes/otherRoutes");
 const invRoute = require("../backend/routes/inv.route")
+const adminRoute = require("../backend/routes/admin.route")
 
 //Connecting MongoDb Database
 mongoose.Promise = global.Promise;
@@ -32,6 +33,7 @@ app.use(
 app.use(cors());
 app.use("/users", userRoute);
 app.use("/inventory", invRoute);
+app.use("/admin", adminRoute);
 app.use(express.static(path.join(__dirname,'../public/')));
 app.use('/',otherRoutes);
 //PORT

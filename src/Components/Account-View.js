@@ -1,6 +1,7 @@
 import { reloadResources } from 'i18next';
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export class Account extends Component {
 
@@ -12,12 +13,15 @@ export class Account extends Component {
     try {
       let user = JSON.parse(localStorage.getItem('user'));
 
+      let roleString = `(${user.role})`
+
+
 
       return (
-        <div>
-          <h1>Account-View:</h1>
-          <h1>User: {user.name}</h1>
-          <h1>ID: {user.id}</h1>
+        <div className='accountNav'>
+          <h1>Account Settings:</h1>
+          <h1>User: {user.name} {roleString}</h1>
+
         </div>
       )
 

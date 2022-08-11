@@ -8,7 +8,7 @@ const UserList = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:4000/users/")
+            .get("http://localhost:4000/admin/view-users")
             .then(({data}) => {
                 setUsers(data);
             }).catch((error) => {
