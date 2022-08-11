@@ -28,6 +28,7 @@ import EditItem from "./Edit-item.component";
 import UserList from "./ManageUsersAdmin/userList.component";
 import EditUser from "./ManageUsersAdmin/editUser.component";
 import CreateUser from "./ManageUsersAdmin/createUser.component";
+import EditProfile from "./EditProfile.component";
 
 const Navibar = () => {
   const { t } = useTranslation();
@@ -37,6 +38,7 @@ const Navibar = () => {
   });
 
   let logInOut;
+  let editProf;
   console.log(user.id + user.name);
 
 
@@ -50,6 +52,11 @@ const Navibar = () => {
     logInOut = (
       <Link to={"/logout"} className="nav-link">
         {t('navbar.logout')}
+      </Link>
+    )
+    editProf = (
+      <Link to={"/editProfile"} className="nav-link">
+        {t('Profile')}
       </Link>
     )
   }
@@ -102,6 +109,8 @@ const Navibar = () => {
                 {adminLink}
                 <Nav>{logInOut}</Nav>
 
+                <Nav>{editProf}</Nav>
+
 
               </Nav>
               <LanguageToggleNavBar />
@@ -129,6 +138,8 @@ const Navibar = () => {
                   />
 
                   <Route path="/logout" element={<Logout />} />
+
+                  <Route path="/editProfile" element={<EditProfile />} />
 
                   <Route path="/" element={<HomePage />} />
 
