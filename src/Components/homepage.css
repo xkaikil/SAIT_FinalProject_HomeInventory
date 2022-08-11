@@ -1,4 +1,6 @@
-
+body {
+    color:white;
+}
 h1{
     color: rgb(170, 198, 250);
     font-weight: bold;
@@ -20,7 +22,6 @@ h1{
     margin: auto;
     margin-top: 7%;
     background-color: rgba(0, 0, 0, 0.676);
-    color: white;
     padding: 3rem;
     width: fit-content;
    border-radius: 30px;

@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 //translation
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 //custom css
 import "./navbar.css";
@@ -30,7 +30,7 @@ import EditUser from "./ManageUsersAdmin/editUser.component";
 import CreateUser from "./ManageUsersAdmin/createUser.component";
 
 const Navibar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [user, setUser] = React.useState({
     name: "Guest",
     id: null,

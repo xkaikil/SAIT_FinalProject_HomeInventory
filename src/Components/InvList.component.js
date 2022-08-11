@@ -3,9 +3,10 @@ import axios from "axios";
 import { Table } from "react-bootstrap";
 import InventoryRow from "./InventoryRow";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 
 const InventoryList = () => {
+    const { t } = useTranslation();
     const [inv, setInv] = useState([]);
 
     useEffect(() => {
@@ -30,14 +31,14 @@ const InventoryList = () => {
     return (
         <div>
             <div className="table-wrapper">
-                <h1>Inventory List</h1>
+                <h1>{t('inventory.inventoryList')}</h1>
                 <Table striped bordered hover>
-                    <thead>
+                    <thead style={{color: "lightblue"}}>
                         <tr>
-                            <th>Category</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Tools</th>
+                            <th>{t('inventory.category')}</th>
+                            <th>{t('inventory.name')}</th>
+                            <th>{t('inventory.price')}</th>
+                            <th>{t('inventory.tools')}</th>
                         </tr>
                     </thead>
                     <tbody>{DataTable()}</tbody>
@@ -46,7 +47,7 @@ const InventoryList = () => {
             <div>
                 <Link to={"/inventory/create-item"}
                     className="createItem">
-                    Add item
+                    {t('inventory.addItem')}
                 </Link>
             </div>
         </div>
