@@ -15,7 +15,10 @@ let invSchema = new Schema(
             type: String,
             required: true
         },
-        owner: {
+        ownerName: {
+            type: String,
+        },
+        ownerId: {
             type: String,
         }
     },
