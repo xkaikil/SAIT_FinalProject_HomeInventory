@@ -15,7 +15,7 @@ const RegisUser = () => {
 
 
     const [formValues, setFormValues] =
-        useState({ firstName: '', lastName: '', email: '', password: '' })
+        useState({ firstName: '', lastName: '', email: '', password: '', role: '' })
     
     const onSubmit = accountObject => {
         axios
@@ -24,17 +24,17 @@ const RegisUser = () => {
                 if (res.status === 200){
 
                 
-               
+                    alert("User Registered Successfully");
               
     
-                  navigate("/emailVerification")
+                  navigate("/login");
                 }
               
                    
                 else
                     Promise.reject()
             })
-            .catch(err => alert('Something went wrong1313'))
+            .catch(err => alert('Something went wrong'))
 
     }
     return (

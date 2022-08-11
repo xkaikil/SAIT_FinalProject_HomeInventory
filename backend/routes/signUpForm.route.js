@@ -15,6 +15,8 @@ router.post("/create-user", (req, res, next) => {
     if (error) {
       return next(error);
     } else {
+      console.log(data);
+      
       const sgMail = require('@sendgrid/mail')
       sgMail.setApiKey("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")
       const msg = {
@@ -32,7 +34,8 @@ router.post("/create-user", (req, res, next) => {
         .catch((error) => {
           console.error(error)
         })
-      res.json(data);
+
+      return res.status(200).end();
     }
   });
 });
