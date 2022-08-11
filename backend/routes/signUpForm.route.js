@@ -43,6 +43,8 @@ router.post("/create-user", (req, res, next) => {
 
 //Validate Login
 router.post("/login", (req, res, next) => {
+ 
+  
   userSchema
     .findOne({
       email: req.body.email,
@@ -50,9 +52,14 @@ router.post("/login", (req, res, next) => {
     }, (error,data) => {
       if (error) {
         return next(error);
-      }if (!data) {
+      }
+      if (!data ) {
         return res.status(401).end('Invalid Credentials');
-      } else {
+      } 
+      if (data.status === "Pending"){
+        return res.status(401).end('Unactivated account');
+      }
+      else {
         res.status(200).json({
           name: data.firstName,
           id: data._id,
@@ -60,8 +67,15 @@ router.post("/login", (req, res, next) => {
         });
       }
     })
-    
   
+    
+
+
+
+
+ 
+
+
 
     /**
      * 

@@ -29,6 +29,7 @@ import UserList from "./ManageUsersAdmin/userList.component";
 import EditUser from "./ManageUsersAdmin/editUser.component";
 import CreateUser from "./ManageUsersAdmin/createUser.component";
 import EditProfile from "./EditProfile.component";
+import EmailVerification from "./EmailVerification";
 
 const Navibar = () => {
   const { t } = useTranslation();
@@ -146,6 +147,10 @@ const Navibar = () => {
                   <Route path="/login" element={<LogIn />} />
 
                   <Route path="/signup" element={<SignUp />} />
+
+                  <Route path="/emailVerification" element={<EmailVerification />} />
+                  
+                  <Route path="/emailVerification/:email" element={<EmailVerification />} />
 
                   <Route path="/admin/*" element={<UserList />} />
                   <Route path="/admin/view-users" element={<UserList />} />
