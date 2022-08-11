@@ -14,6 +14,9 @@ let invSchema = new Schema(
         price: {
             type: String,
             required: true
+        },
+        owner: {
+            type: String,
         }
     },
     {
