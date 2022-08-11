@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import InventoryForm from "./InventoryForm";
 import {useParams} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const EditItem = (props) => {
     const {id} = useParams();
@@ -10,7 +11,7 @@ const EditItem = (props) => {
         name: "",
         price: "",
     });
-
+    let navigate = useNavigate();
     const onSubmit = (invObject) => {
         axios
             .put(
@@ -21,7 +22,8 @@ const EditItem = (props) => {
             .then((res) => {
                 if (res.status === 200) {
                     alert("Item successfully updated");
-                    props.history.push("/inventory");
+                    //props.history.push("/inventory");
+                    navigate('/inventory');
                 } else Promise.reject();
             })
             // .catch((err) => alert("Something went wrong"));

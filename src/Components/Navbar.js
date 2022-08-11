@@ -25,9 +25,9 @@ import Verification from "./EmailVerification";
 import CreateItem from "./create-item.component";
 import InventoryList from "./InvList.component";
 import EditItem from "./Edit-item.component";
-import Admin
- from './ManageUsersAdmin/admin_view';
- import UserList from "./ManageUsersAdmin/userList.component";
+import UserList from "./ManageUsersAdmin/userList.component";
+import EditUser from "./ManageUsersAdmin/editUser.component";
+import CreateUser from "./ManageUsersAdmin/createUser.component";
 
 const Navibar = () => {
   const { t, i18n } = useTranslation();
@@ -68,12 +68,12 @@ const Navibar = () => {
   }, []);
 
   let adminLink;
-      if (user.role === 'admin'){
-        adminLink = 
-        <Nav>
-        <Link to={'/admin'} className="nav-link">Admin</Link>
-        </Nav>
-      }
+  if (user.role === 'admin') {
+    adminLink =
+      <Nav>
+        <Link to={'/admin/view-users'} className="nav-link">Admin</Link>
+      </Nav>
+  }
   return (
     <Router>
       <div className="nav-wrapper">
@@ -102,7 +102,7 @@ const Navibar = () => {
                 {adminLink}
                 <Nav>{logInOut}</Nav>
 
-                
+
               </Nav>
               <LanguageToggleNavBar />
             </Container>
@@ -135,8 +135,19 @@ const Navibar = () => {
                   <Route path="/login" element={<LogIn />} />
 
                   <Route path="/signup" element={<SignUp />} />
-                  <Route path="/admin/*" element={<Admin />} />
-                  <Route path="/admin/view-users" element={<UserList/>} />
+
+                  <Route path="/admin/*" element={<UserList />} />
+                  <Route path="/admin/view-users" element={<UserList />} />
+                  <Route
+                    path="/admin/edit-user/:id"
+                    element={<EditUser />}
+                  />
+
+
+                  <Route
+                    path="/admin/create-user"
+                    element={<CreateUser />}
+                  />
                 </Routes>
               </div>
             </Col>

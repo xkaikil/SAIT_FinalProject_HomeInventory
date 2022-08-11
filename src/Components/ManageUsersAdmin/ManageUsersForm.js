@@ -15,7 +15,7 @@ const ManageUsers = (props) => {
     return (
         <div className="regisForm">
             <Formik {...props} validationSchema={validationSchema}
-                    initialValues={{firstName: '', lastName: '', email: '', password: ''}}>
+                    initialValues={{firstName: '', lastName: '', email: '', password: '', role:'user'}}>
                 <Form>
                     <FormGroup className="firstName">
                         First Name:
@@ -36,6 +36,11 @@ const ManageUsers = (props) => {
                         password:
                         <Field name="password" type="password" className="field-control"/>
                         <ErrorMessage name="password" className="d-block invalid-feedback" component="span"/>
+                    </FormGroup>
+                    <FormGroup className="role">
+                        role:
+                        <Field name="role" type="text" className="field-control"/>
+                        <ErrorMessage name="role" className="d-block invalid-feedback" component="span"/>
                     </FormGroup>
                     <div className="regisButton">
                         <Button variant="danger" size="lg" block="block" type="submit">

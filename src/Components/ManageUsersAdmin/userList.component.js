@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {Table} from "react-bootstrap";
 import UserTableRow from "./UserTableRow";
+import { Link } from "react-router-dom";
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -24,6 +25,13 @@ const UserList = () => {
 
     return (
         <div className="table-wrapper">
+            <h1>Home nVentory User List</h1>
+
+            <div>
+                <Link to={"/admin/create-user"}>
+                    Create a new user
+                </Link>
+            </div>
             <Table striped bordered hover>
                 <thead>
                 <tr>

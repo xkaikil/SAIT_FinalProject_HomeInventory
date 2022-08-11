@@ -25,7 +25,7 @@ const UserTableRow = (props) => {
             <td>{email}</td>
             <td>{password}</td>
             <td>
-                <Link className="edit-link" to={"/edit-user/" + _id}>
+                <Link className="edit-link" to={"/admin/edit-user/" + _id}>
                     Edit
                 </Link>
                 <Button onClick={deleteUser} size="sm" variant="danger">
