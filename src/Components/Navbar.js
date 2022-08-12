@@ -74,6 +74,7 @@ const Navibar = () => {
         <Link to={'/admin/view-users'} className="nav-link">Admin</Link>
       </Nav>
   }
+  
   return (
     <Router>
       <div className="nav-wrapper">
