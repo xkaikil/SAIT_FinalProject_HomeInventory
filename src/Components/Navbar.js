@@ -55,11 +55,7 @@ const Navibar = () => {
         {t('navbar.logout')}
       </Link>
     )
-    editProf = (
-      <Link to={"/editProfile"} className="nav-link">
-        {t('Profile')}
-      </Link>
-    )
+    
   }
 
 

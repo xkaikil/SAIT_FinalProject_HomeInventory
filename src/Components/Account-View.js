@@ -21,7 +21,10 @@ export class Account extends Component {
         <div className='accountNav'>
           <h1>Account Settings:</h1>
           <h1>User: {user.name} {roleString}</h1>
-
+          <Link to={"/editProfile"} className="nav-link">
+            <button>Edit account settings</button>
+        
+      </Link>
         </div>
       )
 
