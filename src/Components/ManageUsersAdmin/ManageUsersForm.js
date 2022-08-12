@@ -2,8 +2,10 @@ import React from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const ManageUsers = (props) => {
+  const { t } = useTranslation();
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("Required"),
     lastName: Yup.string().required("Required"),
@@ -12,25 +14,14 @@ const ManageUsers = (props) => {
       .required("Required"),
     password: Yup.string().required("Required"),
   });
-  //   initialValues={{firstName: '', lastName: '', email: '', password: '', role:'user'}}
 
   console.log(props);
   return (
     <div className="regisForm">
-      <Formik
-        {...props}
-        validationSchema={validationSchema}
-        initialValues={{
-          firstName: "",
-          lastName: "",
-          email: "",
-          password: "",
-          role: "user",
-        }}
-      >
+      <Formik {...props} validationSchema={validationSchema}>
         <Form>
           <FormGroup className="firstName">
-            First Name:
+            {t("admin.firstName")}:
             <Field name="firstName" type="text" className="field-control" />
             <ErrorMessage
               name="first"
@@ -39,7 +30,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="lastName">
-            Last Name:
+            {t("admin.lastName")}:
             <Field name="lastName" type="text" className="field-control" />
             <ErrorMessage
               name="last"
@@ -48,7 +39,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="email">
-            Email:
+            {t("admin.email")}:
             <Field name="email" type="text" className="field-control" />
             <ErrorMessage
               name="first"
@@ -57,7 +48,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="password">
-            password:
+            {t("admin.password")}:
             <Field name="password" type="password" className="field-control" />
             <ErrorMessage
               name="password"
@@ -66,7 +57,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="role">
-            role:
+            {t("admin.role")}:
             <Field name="role" type="text" className="field-control" />
             <ErrorMessage
               name="role"

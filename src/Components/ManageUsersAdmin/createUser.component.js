@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const CreateUser = () => {
     const [formValues, setFormValues] =
-        useState({ firstName: '', lastName: '', email: '', password: '', role: '' })
+        useState({ firstName: '', lastName: '', email: '', password: '', role: '' });
 
     let navigate = useNavigate();
 

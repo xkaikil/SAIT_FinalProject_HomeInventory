@@ -1,4 +1,3 @@
-
 let mongoose = require("mongoose"),
   express = require("express"),
   router = express.Router();
@@ -7,77 +6,66 @@ const { ResourceStore } = require("i18next");
 // Users Model
 let userSchema = require("../models/Users");
 
-
 // Create Users
 router.post("/create-user", (req, res, next) => {
-
   userSchema.create(req.body, (error, data) => {
     if (error) {
       return next(error);
     } else {
       console.log(data);
-      
-      const sgMail = require('@sendgrid/mail')
-      sgMail.setApiKey("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")
+
+      const sgMail = require("@sendgrid/mail");
+      sgMail.setApiKey(
+        "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"
+      );
       const msg = {
         to: req.body.email, // Change to your recipient
-        from: 'huangjason812@gmail.com', // Change to your verified sender
-        subject: 'Verification Link',
-        text: 'Verification email',
-        html: '<strong>Verification email </strong>',
-      }
+        from: "huangjason812@gmail.com", // Change to your verified sender
+        subject: "Verification Link",
+        text: "Verification email",
+        html: "<strong>Verification email </strong>",
+      };
       sgMail
         .send(msg)
         .then(() => {
-          console.log('Email sent')
+          console.log("Email sent");
         })
         .catch((error) => {
-          console.error(error)
-        })
+          console.error(error);
+        });
 
       return res.status(200).end();
     }
   });
 });
 
-
 //Validate Login
 router.post("/login", (req, res, next) => {
- 
-  
-  userSchema
-    .findOne({
+  userSchema.findOne(
+    {
       email: req.body.email,
       password: req.body.password,
-    }, (error,data) => {
+    },
+    (error, data) => {
       if (error) {
         return next(error);
       }
-      if (!data ) {
-        return res.status(401).end('Invalid Credentials');
-      } 
-      if (data.status === "Pending"){
-        return res.status(401).end('Unactivated account');
+      if (!data) {
+        return res.status(401).end("Invalid Credentials");
       }
-      else {
+      if (data.status === "Pending") {
+        return res.status(401).end("Unactivated account");
+      } else {
         res.status(200).json({
           name: data.firstName,
           id: data._id,
-          role: data.role
+          role: data.role,
         });
       }
-    })
-  
-    
+    }
+  );
 
-
-
-
- 
-
-
-
-    /**
+  /**
      * 
 // Read Users
 router.get("/", (req, res) => {
