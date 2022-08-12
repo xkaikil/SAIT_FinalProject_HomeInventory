@@ -39,7 +39,9 @@ const Navibar = () => {
   });
 
   let logInOut;
-  let editProf;
+  let inventoryLink;
+  let accountLink;
+
   console.log(user.id + user.name);
 
 
@@ -49,13 +51,37 @@ const Navibar = () => {
         {t('navbar.login')}
       </Link>
     );
+
+    accountLink = (
+      <Nav>
+        <Link to={"/signup"} className="nav-link">
+          SignUp
+        </Link>
+      </Nav>
+    )
   } else {
     logInOut = (
       <Link to={"/logout"} className="nav-link">
         {t('navbar.logout')}
       </Link>
     )
-    
+
+    inventoryLink = (
+      <Nav>
+        <Link to={"/inventory"} className="nav-link">
+          {t('navbar.inventory')}
+        </Link>
+      </Nav>
+    )
+
+    accountLink = (
+      <Nav>
+        <Link to={"/account"} className="nav-link">
+          {user.name}
+        </Link>
+      </Nav>
+    )
+
   }
 
 
@@ -78,7 +104,7 @@ const Navibar = () => {
         <Link to={'/admin/view-users'} className="nav-link">Admin</Link>
       </Nav>
   }
-  
+
   return (
     <Router>
       <div className="nav-wrapper">
@@ -92,22 +118,14 @@ const Navibar = () => {
               </Navbar.Brand>
 
               <Nav className="justify-content-end">
-                <Nav>
-                  <Link to={"/inventory"} className="nav-link">
-                    {t('navbar.inventory')}
-                  </Link>
-                </Nav>
+                {inventoryLink}
 
-                <Nav>
-                  <Link to={"/account"} className="nav-link">
-                    {user.name}
-                  </Link>
-                </Nav>
+                {accountLink}
 
                 {adminLink}
                 <Nav>{logInOut}</Nav>
 
-                <Nav>{editProf}</Nav>
+
 
 
               </Nav>
@@ -146,7 +164,7 @@ const Navibar = () => {
                   <Route path="/signup" element={<SignUp />} />
 
                   <Route path="/emailVerification" element={<EmailVerification />} />
-                  
+
                   <Route path="/emailVerification/:email" element={<EmailVerification />} />
 
                   <Route path="/admin/*" element={<UserList />} />
