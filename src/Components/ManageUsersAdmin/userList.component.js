@@ -3,8 +3,10 @@ import axios from "axios";
 import { Table } from "react-bootstrap";
 import UserTableRow from "./UserTableRow";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const UserList = () => {
+  const { t } = useTranslation();
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -32,17 +34,17 @@ const UserList = () => {
         <Link to={"/admin/create-user"}>Create a new user</Link>
       </div>
       <Table striped bordered hover>
-        <thead>
+        <thead style={{color: "lightblue"}}>
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Role</th>
-            <th>Action</th>
+            <th>{t('admin.firstName')}</th>
+            <th>{t('admin.lastName')}</th>
+            <th>{t('admin.email')}</th>
+            <th>{t('admin.password')}</th>
+            <th>{t('admin.role')}</th>
+            <th>{t('admin.action')}</th>
           </tr>
         </thead>
-        <tbody>{DataTable()}</tbody>
+        <tbody style={{color: "lightblue"}}>{DataTable()}</tbody>
       </Table>
     </div>
   );
