@@ -32,7 +32,7 @@ const LogIn = () => {
     })
     .catch((err) => {
         if (err.response) {
-            alert("Invalid Credentials");
+            alert("Invalid Credentials or Unverified Account");
         } else
         alert("Something went wrong")});
 };

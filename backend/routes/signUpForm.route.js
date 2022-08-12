@@ -8,11 +8,13 @@ let userSchema = require("../models/Users");
 
 // Create Users
 router.post("/create-user", (req, res, next) => {
+req.body.status = "Unactivated";
   userSchema.create(req.body, (error, data) => {
     if (error) {
       return next(error);
     } else {
-      console.log(data);
+
+      var emailText = '<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body><a href="http://localhost:3000/emailVerification/' + data._id + '">Click this for Verification</a></body></html>'
 
       const sgMail = require("@sendgrid/mail");
       sgMail.setApiKey(
@@ -23,7 +25,7 @@ router.post("/create-user", (req, res, next) => {
         from: "huangjason812@gmail.com", // Change to your verified sender
         subject: "Verification Link",
         text: "Verification email",
-        html: "<strong>Verification email </strong>",
+        html: emailText, 
       };
       sgMail
         .send(msg)
@@ -45,17 +47,15 @@ router.post("/login", (req, res, next) => {
     {
       email: req.body.email,
       password: req.body.password,
+      status: "Activated"
     },
     (error, data) => {
       if (error) {
         return next(error);
       }
       if (!data) {
-        return res.status(401).end("Invalid Credentials");
-      }
-      if (data.status === "Pending") {
-        return res.status(401).end("Unactivated account");
-      } else {
+        return res.status(401).end("Invalid Credentials or Unactivated Account");
+      }else {
         res.status(200).json({
           name: data.firstName,
           id: data._id,
