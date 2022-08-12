@@ -5,7 +5,7 @@ import axios from "axios";
 import { useTranslation } from 'react-i18next';
 
 const InventoryRow = (props) => {
-    const { _id, category, name, price } = props.obj;
+    const { _id, category, name, price, ownerName } = props.obj;
     const { t } = useTranslation();
 
     const deleteItem = () => {
@@ -26,6 +26,7 @@ const InventoryRow = (props) => {
             <td>{category}</td>
             <td>{name}</td>
             <td>{price}</td>
+            <td>{ownerName}</td>
             <td>
                 <Link className="edit-link"
                     to={"/inventory/edit-item/" + _id}>
