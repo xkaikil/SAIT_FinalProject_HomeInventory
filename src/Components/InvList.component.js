@@ -38,6 +38,7 @@ const InventoryList = () => {
                             <th>{t('inventory.category')}</th>
                             <th>{t('inventory.name')}</th>
                             <th>{t('inventory.price')}</th>
+                            <th>Owner</th>
                             <th>{t('inventory.tools')}</th>
                         </tr>
                     </thead>
