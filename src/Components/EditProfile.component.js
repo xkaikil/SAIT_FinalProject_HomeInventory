@@ -44,7 +44,7 @@ const EditProfile = (prop) => {
 
     return (
         <SignUpForm initialValue = {formValues} onSubmit = {onSubmit} enableReinitialize>
-            {t('profile.updateUser')}
+            {t('profile.update')}
         </SignUpForm>
     );
 };

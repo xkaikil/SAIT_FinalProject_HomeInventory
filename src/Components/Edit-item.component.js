@@ -3,8 +3,10 @@ import axios from "axios";
 import InventoryForm from "./InventoryForm";
 import {useParams} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useTranslation} from 'react-i18next';
 
 const EditItem = (props) => {
+    const {t} = useTranslation();
     const {id} = useParams();
     const [formValues, setFormValues] = useState({
         category: "",
@@ -49,7 +51,7 @@ const EditItem = (props) => {
             onSubmit={onSubmit}
             enableReinitialize
         >
-            Update item
+            {t('profile.update')}
         </InventoryForm>
     );
 };
