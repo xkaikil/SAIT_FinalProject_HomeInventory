@@ -24,7 +24,7 @@ const SignUpForm = (props) => {
       <Formik
         {...props}
         validationSchema={validationSchema}
-        initialValues={{ firstName: "", lastName: "", email: "", password: "", role: "user" }}
+        initialValues={{ firstName: "", lastName: "", email: "", password: "", role: "user", status: "Activated" }}
       >
         <Form>
         <FormGroup className="languagePreference">

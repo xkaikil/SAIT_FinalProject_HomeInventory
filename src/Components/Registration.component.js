@@ -15,9 +15,10 @@ const RegisUser = () => {
 
 
     const [formValues, setFormValues] =
-        useState({ firstName: '', lastName: '', email: '', password: '', role: '' })
+        useState({ firstName: '', lastName: '', email: '', password: '', role: '' , status: 'Activated'})
     
     const onSubmit = accountObject => {
+        console.log(accountObject)
         axios
             .post('http://localhost:4000/users/create-user', accountObject)
             .then(res => {
@@ -27,7 +28,7 @@ const RegisUser = () => {
                     alert("User Registered Successfully");
               
     
-                  navigate("/login");
+                  navigate("/emailVerification/" + "huangjason812@gmail.com");
                 }
               
                    

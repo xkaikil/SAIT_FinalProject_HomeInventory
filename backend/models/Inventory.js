@@ -14,6 +14,12 @@ let invSchema = new Schema(
         price: {
             type: String,
             required: true
+        },
+        ownerName: {
+            type: String,
+        },
+        ownerId: {
+            type: String,
         }
     },
     {

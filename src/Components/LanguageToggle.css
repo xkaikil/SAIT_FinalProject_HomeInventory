@@ -16,6 +16,7 @@
 .slider {
   position: absolute;
   cursor: pointer;
+  font-size: 18px;
   top: 0;
   left: 0;
   right: 0;

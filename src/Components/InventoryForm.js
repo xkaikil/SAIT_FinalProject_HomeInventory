@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 import { useTranslation} from 'react-i18next';
+import "./inventory.css";
 
 const InventoryForm = (props) => {
   const {t} = useTranslation();

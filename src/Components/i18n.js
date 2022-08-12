@@ -30,8 +30,10 @@ i18n
             category: "Category",
             delete: "Delete",
             edit: "Edit",
+            inventoryList: "Inventory List",
             name: "Name",
-            price: "Price"
+            price: "Price",
+            tools: "Tools"
           },
           home: {
             tagline: 'Inventory your belongings with HOME nVentory',
@@ -71,8 +73,10 @@ i18n
                 category: "Catégorie",
                 delete: "Effacer",
                 edit: "Éditer",
+                inventoryList: "Liste d'Inventaire",
                 name: "Le Nom",
-                price: "Prix"
+                price: "Prix",
+                tools: "Outils"
             },
             home: {
               tagline: 'Inventoriez vos biens avec HOME nVentory',
