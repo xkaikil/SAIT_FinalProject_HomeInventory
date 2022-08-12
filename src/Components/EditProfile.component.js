@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 //Import the profile form here
-import { useParams } from "react-router-dom";const {t} = useTranslation();
+import { useParams } from "react-router-dom";
 import SignUpForm from "./SignUpForm";
 import { useTranslation} from 'react-i18next';
 
 const EditProfile = (prop) => {
-    
+    const {t} = useTranslation();
     const {id} = useParams();
     const [formValues, setFormValues] = useState ({
         firstName: "",
