@@ -75,4 +75,46 @@ router.post("/create-user", (req, res, next) => {
 	});
 });
 
+
+
+
+
+
+
+// Verifying link
+router
+.route("/Verify-Link/:id")
+.put((req, res, next) => {
+  
+  userSchema.findByIdAndUpdate(
+    req.params.id,
+    {
+      status: "Activated",
+    },
+    (error, data) => {
+      if (error) {
+        return next(error);
+        console.log(error);
+      } else {
+        res.json(data);
+        console.log("user updated successfully !");
+      }
+    }
+  );
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   module.exports = router;

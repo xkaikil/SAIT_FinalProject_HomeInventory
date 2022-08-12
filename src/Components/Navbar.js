@@ -165,7 +165,7 @@ const Navibar = () => {
 
                   <Route path="/emailVerification" element={<EmailVerification />} />
 
-                  <Route path="/emailVerification/:email" element={<EmailVerification />} />
+                  <Route path="/emailVerification/:id" element={<EmailVerification />} />
 
                   <Route path="/admin/*" element={<UserList />} />
                   <Route path="/admin/view-users" element={<UserList />} />
