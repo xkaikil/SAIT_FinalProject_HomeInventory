@@ -17,7 +17,17 @@ const ManageUsers = (props) => {
   console.log(props);
   return (
     <div className="regisForm">
-      <Formik {...props} validationSchema={validationSchema}>
+      <Formik
+        {...props}
+        validationSchema={validationSchema}
+        initialValues={{
+          firstName: "",
+          lastName: "",
+          email: "",
+          password: "",
+          role: "user",
+        }}
+      >
         <Form>
           <FormGroup className="firstName">
             First Name:
