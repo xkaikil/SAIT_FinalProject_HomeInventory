@@ -55,7 +55,7 @@ const Navibar = () => {
     accountLink = (
       <Nav>
         <Link to={"/signup"} className="nav-link">
-          SignUp
+          Sign Up
         </Link>
       </Nav>
     )

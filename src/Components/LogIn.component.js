@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import LogInPageMaster from "./LogInPageMaster";
 import { useTranslation} from 'react-i18next';
+import { useNavigate } from "react-router-dom";
 
 const LogIn = () => {
+  let navigate = useNavigate();
+
   const { t} = useTranslation();
   const [formValues, setFormValues] = useState({
     email: "",
@@ -21,6 +24,7 @@ const LogIn = () => {
 
             console.log(res.data);
             window.location.reload(false);
+          navigate('/inventory');
         }  else Promise.reject();
     })
     .catch((err) => {
