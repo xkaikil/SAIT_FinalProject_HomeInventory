@@ -2,8 +2,10 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useTranslation} from 'react-i18next';
 
 const UserTableRow = (props) => {
+  const {t} = useTranslation();
   const { _id, firstName, lastName, email, password, role } = props.obj;
 
   const deleteUser = () => {
@@ -27,10 +29,10 @@ const UserTableRow = (props) => {
       <td>{role}</td>
       <td>
         <Link className="edit-link" to={"/admin/edit-user/" + _id}>
-          Edit
+        {t('admin.edit')}
         </Link>
         <Button onClick={deleteUser} size="sm" variant="danger">
-          Delete
+        {t('admin.delete')}
         </Button>
       </td>
     </tr>

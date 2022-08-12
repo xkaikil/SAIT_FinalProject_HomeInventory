@@ -37,14 +37,18 @@ i18n
             tools: "Tools",
           },
           admin: {
+            adminView: "Admin View",
+            action: "action",
             createNewUser: "Create New User",
             firstName: "First Name",
             lastName: "Last Name",
-            email: "Email",
+            email: "E-mail",
+            homeNventoryUserList: "Home nVentory User List",
             password: "Password",
             role: "Role",
             edit: "Edit",
             delete: "Delete",
+            users: "Users"
           },
           home: {
             tagline: "Inventory your belongings with HOME nVentory",
@@ -68,7 +72,7 @@ i18n
           profile: {
             accountCreated:
               "Account Created. In order to login, you have activate your account click the link of the email sent to your account.",
-            updateUser: "Update User",
+            update: "Update",
           },
         },
       },
@@ -92,15 +96,18 @@ i18n
             tools: "Outils",
           },
           admin: {
+            adminView: "Vue Administrateur",
             action: "action",
             createNewUser: "Créer un nouvel utilisateur",
             firstName: "Prénom",
             lastName: "Le nom de famille",
             email: "E-mail",
-            password: "le mot de passe",
+            homeNventoryUserList: "Home nVentory Liste D'utilisateur",
+            password: "Le Mot de Passe",
             role: "Rôle",
             edit: "Éditer",
             delete: "Effacer",
+            users: "Utilisateurs"
           },
           home: {
             tagline: "Inventoriez vos biens avec HOME nVentory",
@@ -123,7 +130,7 @@ i18n
           profile: {
             accountCreated:
               "Compte créé. Pour vous connecter, vous devez activer votre compte en cliquant sur le lien de l'e-mail envoyé à votre compte.",
-            updateUser: "Mettre à jour l'utilisateur",
+            update: "Mettre à Jour",
           },
         },
       },
