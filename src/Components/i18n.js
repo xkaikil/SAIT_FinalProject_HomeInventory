@@ -37,8 +37,9 @@ i18n
             tools: "Tools",
           },
           admin: {
+            admin: "Admin",
             adminView: "Admin View",
-            action: "action",
+            action: "Action",
             createNewUser: "Create New User",
             firstName: "First Name",
             lastName: "Last Name",
@@ -96,8 +97,9 @@ i18n
             tools: "Outils",
           },
           admin: {
+            admin: "Administrateur",
             adminView: "Vue Administrateur",
-            action: "action",
+            action: "Action",
             createNewUser: "Créer un nouvel utilisateur",
             firstName: "Prénom",
             lastName: "Le nom de famille",

@@ -34,7 +34,7 @@ const UserList = () => {
         <Link to={"/admin/create-user"}>{t('admin.createNewUser')}</Link>
       </div>
       <Table striped bordered hover>
-        <thead style={{color: "lightblue"}}>
+        <thead style={{color: "lightblue",backgroundColor:"#151159"}}>
           <tr>
             <th>{t('admin.firstName')}</th>
             <th>{t('admin.lastName')}</th>
@@ -44,7 +44,7 @@ const UserList = () => {
             <th>{t('admin.action')}</th>
           </tr>
         </thead>
-        <tbody style={{color: "lightblue"}}>{DataTable()}</tbody>
+        <tbody style={{backgroundColor: "#528cff"}}>{DataTable()}</tbody>
       </Table>
     </div>
   );

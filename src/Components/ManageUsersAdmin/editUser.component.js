@@ -3,8 +3,10 @@ import axios from "axios";
 import ManageUsersForm from "./ManageUsersForm";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const EditUser = (props) => {
+  const { t } = useTranslation();
   const { id } = useParams();
   let navigate = useNavigate();
   const [formValues, setFormValues] = useState({
@@ -44,7 +46,7 @@ const EditUser = (props) => {
       onSubmit={onSubmit}
       enableReinitialize
     >
-      Update User
+      {t('profile.update')}
     </ManageUsersForm>
   );
 };

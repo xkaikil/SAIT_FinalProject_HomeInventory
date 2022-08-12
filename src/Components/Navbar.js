@@ -101,7 +101,7 @@ const Navibar = () => {
   if (user.role === 'admin') {
     adminLink =
       <Nav>
-        <Link to={'/admin/view-users'} className="nav-link">Admin</Link>
+        <Link to={'/admin/view-users'} className="nav-link">{t('admin.admin')}</Link>
       </Nav>
   }
 

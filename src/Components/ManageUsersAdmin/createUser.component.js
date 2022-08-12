@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import ManageUsersForm from "./ManageUsersForm";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const CreateUser = () => {
+    const { t } = useTranslation();
     const [formValues, setFormValues] =
         useState({ firstName: '', lastName: '', email: '', password: '', role: '' });
 
@@ -26,7 +28,7 @@ const CreateUser = () => {
 
     return (
         <ManageUsersForm initialValue={formValues} onSubmit={onSubmit} enableReinitialize>
-            Register
+            {t('login.register')}
         </ManageUsersForm>
     )
 }
