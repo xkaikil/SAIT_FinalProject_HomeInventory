@@ -21,7 +21,7 @@ const ManageUsers = (props) => {
       <Formik {...props} validationSchema={validationSchema}>
         <Form>
           <FormGroup className="firstName">
-            {t("admin.firstName")}:
+            {t('admin.firstName')}:
             <Field name="firstName" type="text" className="field-control" />
             <ErrorMessage
               name="first"
@@ -30,7 +30,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="lastName">
-            {t("admin.lastName")}:
+            {t('admin.lastName')}:
             <Field name="lastName" type="text" className="field-control" />
             <ErrorMessage
               name="last"
@@ -39,7 +39,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="email">
-            {t("admin.email")}:
+            {t('admin.email')}:
             <Field name="email" type="text" className="field-control" />
             <ErrorMessage
               name="first"
@@ -48,7 +48,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="password">
-            {t("admin.password")}:
+            {t('admin.password')}:
             <Field name="password" type="password" className="field-control" />
             <ErrorMessage
               name="password"
@@ -57,7 +57,7 @@ const ManageUsers = (props) => {
             />
           </FormGroup>
           <FormGroup className="role">
-            {t("admin.role")}:
+            {t('admin.role')}:
             <Field name="role" type="text" className="field-control" />
             <ErrorMessage
               name="role"
