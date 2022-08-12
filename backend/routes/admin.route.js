@@ -21,7 +21,7 @@ router.get("/view-users", (req, res) => {
 router
 .route("/update-user/:id")
 // Get Single Student
-.get((req, res) => {
+.get((req, res, next) => {
   userSchema.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error);

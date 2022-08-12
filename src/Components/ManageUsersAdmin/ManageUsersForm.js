@@ -18,7 +18,7 @@ const ManageUsers = (props) => {
   console.log(props);
   return (
     <div className="regisForm">
-      <Formik {...props} validationSchema={validationSchema}>
+      <Formik {...props} validationSchema={validationSchema} enableReinitialized>
         <Form>
           <FormGroup className="firstName">
             {t('admin.firstName')}:

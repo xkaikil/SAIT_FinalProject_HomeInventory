@@ -39,7 +39,7 @@ const RegisUser = () => {
 
     }
     return (
-        <SignUpForm initialValue={formValues} onSubmit={onSubmit} enableReinitialize>
+        <SignUpForm initialValues={formValues} onSubmit={onSubmit} enableReinitialize>
             {t('login.register')}
             
         </SignUpForm>

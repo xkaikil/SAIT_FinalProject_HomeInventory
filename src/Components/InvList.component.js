@@ -8,10 +8,11 @@ import { useTranslation } from "react-i18next";
 const InventoryList = () => {
     const { t } = useTranslation();
     const [inv, setInv] = useState([]);
-
+    let user = JSON.parse(localStorage.getItem('user'));
+    let id = user.id;
     useEffect(() => {
         axios
-            .get("http://localhost:4000/inventory/")
+            .get("http://localhost:4000/inventory/get-list/" + id)
             .then(({ data }) => {
                 setInv(data);
             })
@@ -38,7 +39,7 @@ const InventoryList = () => {
                             <th>{t('inventory.category')}</th>
                             <th>{t('inventory.name')}</th>
                             <th>{t('inventory.price')}</th>
-                            <th>{t('inventory.owner')}</th>
+                            {/**<th>{t('inventory.owner')}</th>*/}
                             <th>{t('inventory.tools')}</th>
                         </tr>
                     </thead>

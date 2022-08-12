@@ -34,7 +34,7 @@ i18n
             name: "Name",
             owner: "Owner",
             price: "Price",
-            tools: "Tools",
+            tools: "Action",
           },
           admin: {
             admin: "Admin",
@@ -94,7 +94,7 @@ i18n
             name: "Le Nom",
             owner: "Propriétaire",
             price: "Prix",
-            tools: "Outils",
+            tools: "Action",
           },
           admin: {
             admin: "Administrateur",

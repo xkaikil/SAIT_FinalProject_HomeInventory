@@ -16,7 +16,7 @@ const EditUser = (props) => {
     password: "",
     role: "",
   });
-
+  
   const onSubmit = (userObject) => {
     axios
       .put("http://localhost:4000/admin/update-user/" + id, userObject)
@@ -34,6 +34,7 @@ const EditUser = (props) => {
     axios
       .get("http://localhost:4000/admin/update-user/" + id)
       .then((res) => {
+        console.log(res.data)
         const { firstName, lastName, email, password, role } = res.data;
         setFormValues({ firstName, lastName, email, password, role });
       })

@@ -68,7 +68,7 @@ const Navibar = () => {
 
     inventoryLink = (
       <Nav>
-        <Link to={"/inventory"} className="nav-link">
+        <Link to={"/inventory/"} className="nav-link">
           {t('navbar.inventory')}
         </Link>
       </Nav>
@@ -141,7 +141,7 @@ const Navibar = () => {
                 <Routes>
                   <Route exact path="/account" element={<Account />} />
 
-                  <Route path="/inventory" element={<InventoryList />} />
+                  <Route path="/inventory/" element={<InventoryList />} />
 
                   <Route
                     path="/inventory/create-item"

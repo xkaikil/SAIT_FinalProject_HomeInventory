@@ -6,10 +6,13 @@ import { useNavigate } from "react-router-dom";
 const CreateItem = () => {
   const { t} = useTranslation();
   let navigate = useNavigate();
+  let user = JSON.parse(localStorage.getItem('user'));
+
   const [formValues, setFormValues] = useState({
     category: "",
     name: "",
     price: "",
+    ownerId: user.id
   });
   const onSubmit = (itemObject) => {
     axios
