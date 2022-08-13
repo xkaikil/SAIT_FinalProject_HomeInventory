@@ -18,3 +18,11 @@ a:link {
   a:hover {
     color:rgb(0, 247, 255);
   }
+
+  @media all and (max-width:767px) {
+    .headerlogo{
+      visibility: hidden;
+      position:absolute;
+    }
+  }
+  

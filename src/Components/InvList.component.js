@@ -34,7 +34,7 @@ const InventoryList = () => {
             <div className="table-wrapper">
                 <h1>{t('inventory.inventoryList')}</h1>
                 <Table striped bordered hover>
-                    <thead style={{color: "lightblue"}}>
+                    <thead style={{color: "lightblue",backgroundColor:"#151159"}}>
                         <tr>
                             <th>{t('inventory.category')}</th>
                             <th>{t('inventory.name')}</th>
@@ -43,7 +43,7 @@ const InventoryList = () => {
                             <th>{t('inventory.tools')}</th>
                         </tr>
                     </thead>
-                    <tbody>{DataTable()}</tbody>
+                    <tbody style={{backgroundColor: "#528cff"}}>{DataTable()}</tbody>
                 </Table>
             </div>
             <div>
