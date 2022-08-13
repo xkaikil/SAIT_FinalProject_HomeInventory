@@ -33,6 +33,7 @@ import EmailVerification from "./EmailVerification";
 import CategoryList from "./ManageUsersAdmin/categoryList.component";
 import EditCategory from "./ManageUsersAdmin/editCategory.component";
 import CreateCategory from "./ManageUsersAdmin/createCategory";
+import PageNotFound from "./PageNotFound";
 
 const Navibar = () => {
   const { t } = useTranslation();
@@ -206,6 +207,8 @@ const Navibar = () => {
                     path="/admin/create-user"
                     element={<CreateUser />}
                   />
+
+                  <Route path="*" element={<PageNotFound/>}/>
                 </Routes>
               </div>
             </Col>
