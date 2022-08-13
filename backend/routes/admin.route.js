@@ -157,7 +157,25 @@ router.post("/create-user", (req, res, next) => {
 });
 
 
-
+router
+.route("/deactivate-Account/:id")
+.put((req, res, next) => {
+  userSchema.findByIdAndUpdate(
+    req.params.id,
+    {
+      status: "Deactivated"
+    },
+    (error, data) => {
+      if (error) {
+        return next(error);
+        console.log(error);
+      } else {
+        res.json(data);
+        console.log("user updated successfully !");
+      }
+    }
+  );
+});
 
 
 
