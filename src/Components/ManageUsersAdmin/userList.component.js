@@ -41,6 +41,7 @@ const UserList = () => {
             <th>{t('admin.email')}</th>
             <th>{t('admin.password')}</th>
             <th>{t('admin.role')}</th>
+            <th>{t('admin.status')}</th>
             <th>{t('admin.action')}</th>
           </tr>
         </thead>

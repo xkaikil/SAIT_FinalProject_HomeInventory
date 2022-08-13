@@ -3,6 +3,9 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
+
+
 
 const ManageUsers = (props) => {
   const { t } = useTranslation();
@@ -13,8 +16,11 @@ const ManageUsers = (props) => {
       .email("You have to enter an invalid email address")
       .required("Required"),
     password: Yup.string().required("Required"),
+    status: Yup.string().oneOf(["Activated", "Unactivated"], "Must be 'Activate' or 'Unactivate'"),
   });
-
+  
+  console.log("test")
+  console.log(props.initialValues);
   console.log(props);
   return (
     <div className="regisForm">
@@ -61,6 +67,15 @@ const ManageUsers = (props) => {
             <Field name="role" type="text" className="field-control" />
             <ErrorMessage
               name="role"
+              className="d-block invalid-feedback"
+              component="span"
+            />
+          </FormGroup>
+          <FormGroup className="Status">
+            {t('admin.status')}:
+            <Field name="status" type="text" className="field-control" />
+            <ErrorMessage
+              name="status"
               className="d-block invalid-feedback"
               component="span"
             />

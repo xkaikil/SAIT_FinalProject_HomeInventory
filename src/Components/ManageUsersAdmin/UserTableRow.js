@@ -6,7 +6,7 @@ import { useTranslation} from 'react-i18next';
 
 const UserTableRow = (props) => {
   const {t} = useTranslation();
-  const { _id, firstName, lastName, email, password, role } = props.obj;
+  const { _id, firstName, lastName, email, password, role, status} = props.obj;
 
   const deleteUser = () => {
     axios
@@ -27,6 +27,7 @@ const UserTableRow = (props) => {
       <td>{email}</td>
       <td>{password}</td>
       <td>{role}</td>
+      <td>{status}</td>
       <td>
         <Link className="edit-link" to={"/admin/edit-user/" + _id}>
         {t('admin.edit')}

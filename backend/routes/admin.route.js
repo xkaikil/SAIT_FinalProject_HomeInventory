@@ -80,7 +80,6 @@ router.post("/create-user", (req, res, next) => {
 
 
 
-
 // Verifying link
 router
 .route("/Verify-Link/:id")

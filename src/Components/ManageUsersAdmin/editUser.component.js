@@ -15,7 +15,11 @@ const EditUser = (props) => {
     email: "",
     password: "",
     role: "",
+    status: "",
   });
+
+
+  
 
   const onSubmit = (userObject) => {
     axios
@@ -34,8 +38,10 @@ const EditUser = (props) => {
     axios
       .get("http://localhost:4000/admin/update-user/" + id)
       .then((res) => {
-        const { firstName, lastName, email, password, role } = res.data;
-        setFormValues({ firstName, lastName, email, password, role });
+        console.log("UseEffect ----------");
+        console.log(res.data);
+        const { firstName, lastName, email, password, role, status} = res.data;
+        setFormValues({ firstName, lastName, email, password, role, status });
       })
       .catch((err) => console.log(err));
   }, []);
