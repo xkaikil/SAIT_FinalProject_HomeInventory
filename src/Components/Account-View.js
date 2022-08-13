@@ -23,7 +23,7 @@ export class Account extends Component {
       .put("http://localhost:4000/admin/deactivate-Account/" + user.id)
       .then((res) => {
         if (res.status === 200) {
-          alert("Account Deactivated")
+          alert("Account Deactivated - Changes will take affect on logout")
   
       
        
