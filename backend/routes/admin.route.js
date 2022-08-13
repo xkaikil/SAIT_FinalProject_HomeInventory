@@ -165,7 +165,6 @@ router.post("/create-user", (req, res, next) => {
 router
 .route("/Verify-Link/:id")
 .put((req, res, next) => {
-  
   userSchema.findByIdAndUpdate(
     req.params.id,
     {
@@ -176,6 +175,39 @@ router
         return next(error);
         console.log(error);
       } else {
+        userSchema.findOne(
+          {
+            _id: req.params.id,
+            status: "Activated"
+          },
+          (error, data) => {
+            var emailText = '<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body>Your Account has been Verified<br>Votre compte a été vérifié </body></html>'
+
+            const sgMail = require("@sendgrid/mail");
+            sgMail.setApiKey(
+              "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"
+            );
+            const msg = {
+              to: data.email, // Change to your recipient
+              from: "huangjason812@gmail.com", // Change to your verified sender
+              subject: "Verification Link",
+              text: "Verification email",
+              html: emailText, 
+            };
+            sgMail
+            .send(msg)
+            .then(() => {
+              console.log("Email sent");
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+
+
+          })
+        
+      
+
         res.json(data);
         console.log("user updated successfully !");
       }
