@@ -22,7 +22,7 @@ export class Logout extends Component {
         <div className='logout-wrapper'>
         <h1>Are you sure you want to log out?</h1>
 
-        <button onClick={this.logoutHandler}>Yes, Log me out</button>
+        <button onClick={this.logoutHandler} className="deleteItem">Yes, Log me out</button>
 
         </div>
     )

@@ -50,8 +50,8 @@ export class Account extends Component {
           <Link to={"/editProfile"} className="nav-link">
             <button className="createItem">Edit account settings</button>
       </Link>
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-            <button className="createItem" onClick={onClick}>Deactivate Account</button>
+      <br/>
+            <button className="deleteItem" onClick={onClick}>Deactivate Account</button>
         </div>
       )
 

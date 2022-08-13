@@ -31,7 +31,10 @@ const UserList = () => {
       <h1>{t('admin.homeNventoryUserList')}</h1>
 
       <div>
-        <Link to={"/admin/create-user"}>{t('admin.createNewUser')}</Link>
+        <Link to={"/admin/create-user"}>
+          <button className="createItem">
+          {t('admin.createNewUser')}
+            </button></Link>
       </div>
       <Table striped bordered hover>
         <thead style={{color: "lightblue",backgroundColor:"#151159"}}>
