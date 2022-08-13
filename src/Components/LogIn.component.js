@@ -23,8 +23,11 @@ const LogIn = () => {
             localStorage.setItem('user',JSON.stringify(res.data));
 
             console.log(res.data);
+
+
+            
             window.location.reload(false);
-          navigate('/inventory');
+          //navigate('/inventory');
         }  else Promise.reject();
     })
     .catch((err) => {

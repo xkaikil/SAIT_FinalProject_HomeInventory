@@ -26,7 +26,6 @@ const InventoryRow = (props) => {
             <td>{category}</td>
             <td>{name}</td>
             <td>{price}</td>
-            <td>{ownerName}</td>
             <td>
                 <Link className="edit-link"
                     to={"/inventory/edit-item/" + _id}>

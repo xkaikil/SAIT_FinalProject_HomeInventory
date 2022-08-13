@@ -18,13 +18,11 @@ router.post("/create-item", (req, res, next) => {
 });
 
 // READ inventory
-router.get("/", (req, res) => {
-	invSchema.find((error, data) => {
-		if (error) {
-			return next(error);
-		} else {
-			res.json(data);
-		}
+router.get("/get-list/:id", (req, res) => {
+	invSchema.find({ownerId:req.params.id}).then(function(data){
+		console.log('success');
+		return res.json(data);
+		
 	});
 });
 
