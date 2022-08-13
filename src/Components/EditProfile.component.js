@@ -28,7 +28,7 @@ const EditProfile = (prop) => {
         )
         .then((res) => {
             if (res.status == 200) {
-                alert("Account successfully updated");
+                alert("Account successfully updated, Changes will take effect in the next log in.");
                 navigate('/account');
             } else Promise.reject();
         })

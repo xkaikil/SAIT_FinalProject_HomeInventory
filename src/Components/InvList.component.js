@@ -4,6 +4,7 @@ import { Table } from "react-bootstrap";
 import InventoryRow from "./InventoryRow";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import './extra.css';
 
 const InventoryList = () => {
     const { t } = useTranslation();
@@ -46,10 +47,13 @@ const InventoryList = () => {
                     <tbody style={{backgroundColor: "#528cff"}}>{DataTable()}</tbody>
                 </Table>
             </div>
-            <div>
+            <div >
                 <Link to={"/inventory/create-item"}
-                    className="createItem">
-                    {t('inventory.addItem')}
+                
+                    ><button className="createItem">
+                        {t('inventory.addItem')}
+                    </button>
+                    
                 </Link>
             </div>
         </div>

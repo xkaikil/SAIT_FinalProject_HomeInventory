@@ -40,3 +40,14 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.createItem{
+  font-size: 2rem;
+  border-style: groove;
+  border-radius: 20px;
+  background-color: #151159;
+  border-color: none;
+  padding: 1rem;
+  color: white;
+ 
+}
