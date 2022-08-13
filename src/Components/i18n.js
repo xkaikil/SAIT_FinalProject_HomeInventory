@@ -48,6 +48,8 @@ i18n
             password: "Password",
             status: "Status",
             role: "Role",
+            category: "Category",
+            createCategory: "Create Category",
             edit: "Edit",
             delete: "Delete",
             users: "Users"
@@ -108,6 +110,8 @@ i18n
             homeNventoryUserList: "Home nVentory Liste D'utilisateur",
             password: "Le Mot de Passe",
             status: "Statut",
+            category: "Catégorie",
+            createCategory: "Créer une Catégorie",
             role: "Rôle",
             edit: "Éditer",
             delete: "Effacer",

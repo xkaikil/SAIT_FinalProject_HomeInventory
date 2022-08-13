@@ -30,6 +30,9 @@ import EditUser from "./ManageUsersAdmin/editUser.component";
 import CreateUser from "./ManageUsersAdmin/createUser.component";
 import EditProfile from "./EditProfile.component";
 import EmailVerification from "./EmailVerification";
+import CategoryList from "./ManageUsersAdmin/categoryList.component";
+import EditCategory from "./ManageUsersAdmin/editCategory.component";
+import CreateCategory from "./ManageUsersAdmin/createCategory";
 
 const Navibar = () => {
   const { t } = useTranslation();
@@ -98,11 +101,19 @@ const Navibar = () => {
   }, []);
 
   let adminLink;
+  let categoryLink;
   if (user.role === 'admin') {
-    adminLink =
+    adminLink = 
       <Nav>
         <Link to={'/admin/view-users'} className="nav-link">{t('admin.admin')}</Link>
       </Nav>
+    
+    categoryLink =
+      <Nav>
+        <Link to={'/admin/view-category'} className="nav-link">{t('admin.category')}</Link>
+      </Nav>
+    
+
   }
 
   return (
@@ -123,6 +134,7 @@ const Navibar = () => {
                 {accountLink}
 
                 {adminLink}
+                {categoryLink}
                 <Nav>{logInOut}</Nav>
 
 
@@ -169,11 +181,26 @@ const Navibar = () => {
 
                   <Route path="/admin/*" element={<UserList />} />
                   <Route path="/admin/view-users" element={<UserList />} />
+
+
+                  <Route path="/admin/view-category" element={<CategoryList />} />
+
+
+
+
+                  <Route
+                    path="/admin/edit-category/:id"
+                    element={<EditCategory />}
+                  />
                   <Route
                     path="/admin/edit-user/:id"
                     element={<EditUser />}
                   />
 
+                  <Route
+                    path="/admin/create-category"
+                    element={<CreateCategory />}
+                  />
 
                   <Route
                     path="/admin/create-user"
