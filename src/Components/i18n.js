@@ -78,6 +78,9 @@ i18n
               "Account Created. In order to login, you have activate your account click the link of the email sent to your account.",
             update: "Update",
           },
+          other: {
+            emailVerificationConfirmation: "You have been verified, you can close this page."
+          }
         },
       },
       fr: {
@@ -140,6 +143,9 @@ i18n
               "Compte créé. Pour vous connecter, vous devez activer votre compte en cliquant sur le lien de l'e-mail envoyé à votre compte.",
             update: "Mettre à Jour",
           },
+          other: {
+            emailVerificationConfirmation: "Vous avez été vérifié, vous pouvez fermer cette page."
+          }
         },
       },
     },

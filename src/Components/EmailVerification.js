@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import ManageUsers from "./ManageUsersAdmin/ManageUsersForm";
 import { useState } from "react";
-
+import "./EmailVerification.css";
 
 
 const EmailVerification = () => {
@@ -26,8 +26,8 @@ const EmailVerification = () => {
 
  
     return(
-<div>
-You have been verified, you can close this page.
+<div className="verifiedConfirm">
+    {t('other.emailVerificationConfirmation')}
 </div>
   );
 }
