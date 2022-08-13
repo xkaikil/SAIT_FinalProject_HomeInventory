@@ -31,7 +31,11 @@ const CategoryList = () => {
       <h1>{t('admin.homeNventoryUserList')}</h1>
 
       <div>
-        <Link to={"/admin/create-category"}>{t('admin.createCategory')}</Link>
+        <Link to={"/admin/create-category"}>
+          <button className="createItem">
+          {t('admin.createCategory')}
+          </button>
+          </Link>
       </div>
       <Table striped bordered hover>
         <thead style={{color: "lightblue",backgroundColor:"#151159"}}>

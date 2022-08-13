@@ -14,7 +14,9 @@ const Admin = () => {
             <Navbar>
                 <Nav>
                     
-                   <Link to='/admin/view-users'>{t('admin.users')}</Link> 
+                   <Link to='/admin/view-users'>
+                    <button className="createItem">{t('admin.users')}</button>
+                    </Link> 
                     
                 </Nav>
             </Navbar>
