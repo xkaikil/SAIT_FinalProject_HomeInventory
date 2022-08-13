@@ -23,7 +23,7 @@ req.body.status = "Unactivated";
       const msg = {
         to: req.body.email, // Change to your recipient
         from: "huangjason812@gmail.com", // Change to your verified sender
-        subject: "Verification Link",
+        subject: "Verification Link from HomenVentory",
         text: "Verification email",
         html: emailText, 
       };
